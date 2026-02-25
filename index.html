@@ -77,10 +77,10 @@
         }
     </style>
 
-    <!-- Tailwind CSS -->
-    <script defer src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
     <script>
-        tailwind.config = {
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
@@ -111,8 +111,9 @@
                     }
                 }
             }
-        }
+        };
     </script>
+    <script defer src="https://cdn.tailwindcss.com"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -368,7 +369,8 @@
                 <a href="#" class="flex items-center gap-3 group" aria-label="Pro Color Extractor Home">
                     <div
                         class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center shadow-lg shadow-brand-500/25">
-                        <svg class="w-7 h-7" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-7 h-7" width="28" height="28" viewBox="0 0 512 512"
+                            xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <linearGradient id="spectrum" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" stop-color="#ff0055" />
@@ -447,7 +449,7 @@
                     <a href="https://github.com/oathanrex" target="_blank" rel="noopener me"
                         class="hidden sm:flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50"
                         aria-label="Oathan Rex Portfolio">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
@@ -460,14 +462,14 @@
                         aria-label="Toggle dark mode" aria-pressed="false">
                         <div id="themeToggleKnob"
                             class="absolute top-1 left-1 w-6 h-6 rounded-full bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center">
-                            <svg id="sunIcon" class="w-3.5 h-3.5 text-amber-500" fill="currentColor"
-                                viewBox="0 0 20 20">
+                            <svg id="sunIcon" class="w-3.5 h-3.5 text-amber-500" width="14" height="14"
+                                fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <svg id="moonIcon" class="w-3.5 h-3.5 text-brand-400 hidden" fill="currentColor"
-                                viewBox="0 0 20 20">
+                            <svg id="moonIcon" class="w-3.5 h-3.5 text-brand-400 hidden" width="14" height="14"
+                                fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                             </svg>
                         </div>
@@ -507,8 +509,8 @@
                         <div class="relative">
                             <div
                                 class="w-16 h-16 rounded-2xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-brand-900/50 transition-colors">
-                                <svg class="w-8 h-8 text-brand-500" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="1.5">
+                                <svg class="w-8 h-8 text-brand-500" width="32" height="32" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
                                 </svg>
@@ -609,8 +611,9 @@
                         <button id="exportAllBtn" type="button"
                             class="flex items-center gap-2 px-4 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-xl shadow-lg shadow-brand-500/25 transition-all hover:shadow-brand-500/40"
                             aria-label="Export all colors">
-                            <svg class="w-4 h-4" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="w-4 h-4" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                                 <polyline points="7 10 12 15 17 10" />
                                 <line x1="12" x2="12" y1="15" y2="3" />
@@ -638,9 +641,9 @@
                     <div class="text-center group">
                         <div
                             class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                            <svg class="w-7 h-7 text-blue-500" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg class="w-7 h-7 text-blue-500" width="28" height="28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                                 <polyline points="17 8 12 3 7 8" />
                                 <line x1="12" x2="12" y1="3" y2="15" />
@@ -653,9 +656,9 @@
                     <div class="text-center group">
                         <div
                             class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                            <svg class="w-7 h-7 text-purple-500" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg class="w-7 h-7 text-purple-500" width="28" height="28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path
                                     d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z" />
                                 <path d="m14 7 3 3" />
@@ -674,9 +677,9 @@
                     <div class="text-center group">
                         <div
                             class="w-14 h-14 rounded-2xl bg-pink-50 dark:bg-pink-900/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                            <svg class="w-7 h-7 text-pink-500" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg class="w-7 h-7 text-pink-500" width="28" height="28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
                                 <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
                             </svg>
@@ -702,7 +705,7 @@
                             class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
                             Is this tool really free?
                             <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
@@ -716,7 +719,7 @@
                             class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
                             Are my images uploaded to a server?
                             <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
@@ -731,7 +734,7 @@
                             class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
                             What image formats are supported?
                             <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
@@ -745,7 +748,7 @@
                             class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
                             How does the color extraction work?
                             <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
@@ -760,7 +763,7 @@
                             class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
                             Can I use extracted colors commercially?
                             <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
                             </svg>
@@ -784,8 +787,8 @@
                 <div class="flex items-center gap-3">
                     <div
                         class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center">
-                        <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
+                        <svg class="w-4 h-4 text-white" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485" />
                         </svg>
@@ -827,7 +830,8 @@
                     <a href="https://oathanrex.github.io" target="_blank" rel="noopener me"
                         class="social-link p-2.5 rounded-xl text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all">
 
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <svg class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                            aria-hidden="true">
                             <path
                                 d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.93 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.52 11.52 0 0112 6.844c1.02.005 2.047.138 3.006.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.874.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.61-2.807 5.624-5.48 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z" />
                         </svg>
@@ -851,7 +855,7 @@
                     <!-- YouTube -->
                     <a href="https://youtube.com/@oathanrex" target="_blank" rel="noopener me"
                         class="social-link p-2.5 rounded-xl text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <svg class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M23.498 6.186C23 4.5 21.6 4 12 4S1 4.5.502 6.186 0 12 0 12s0 3.93.502 5.814C1 19.5 2.4 20 12 20s11-.5 11.498-2.186S24 12 24 12zM9.5 15.5v-7l6 3.5-6 3.5z" />
                         </svg>
@@ -872,493 +876,493 @@
     <!-- JAVASCRIPT ENGINE -->
     <!-- ============================================ -->
     <script>
-            (function () {
-                'use strict';
+        (function () {
+            'use strict';
 
-                // ==========================================
-                // THEME MANAGEMENT
-                // ==========================================
-                const ThemeManager = {
-                    // DOM refs cached at init — avoids repeated getElementById on every toggle
-                    _knob: null, _sun: null, _moon: null,
-                    init() {
-                        this._knob = document.getElementById('themeToggleKnob');
-                        this._sun = document.getElementById('sunIcon');
-                        this._moon = document.getElementById('moonIcon');
+            // ==========================================
+            // THEME MANAGEMENT
+            // ==========================================
+            const ThemeManager = {
+                // DOM refs cached at init — avoids repeated getElementById on every toggle
+                _knob: null, _sun: null, _moon: null,
+                init() {
+                    this._knob = document.getElementById('themeToggleKnob');
+                    this._sun = document.getElementById('sunIcon');
+                    this._moon = document.getElementById('moonIcon');
 
-                        const saved = localStorage.getItem('theme');
-                        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                        const isDark = saved === 'dark' || (!saved && prefersDark);
-                        this.apply(isDark);
+                    const saved = localStorage.getItem('theme');
+                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    const isDark = saved === 'dark' || (!saved && prefersDark);
+                    this.apply(isDark);
 
-                        document.getElementById('themeToggle').addEventListener('click', () => {
-                            const nowDark = document.documentElement.classList.toggle('dark');
-                            localStorage.setItem('theme', nowDark ? 'dark' : 'light');
-                            this.updateToggleUI(nowDark);
-                        });
+                    document.getElementById('themeToggle').addEventListener('click', () => {
+                        const nowDark = document.documentElement.classList.toggle('dark');
+                        localStorage.setItem('theme', nowDark ? 'dark' : 'light');
+                        this.updateToggleUI(nowDark);
+                    });
 
-                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                            if (!localStorage.getItem('theme')) this.apply(e.matches);
-                        });
-                    },
-                    apply(isDark) {
-                        document.documentElement.classList.toggle('dark', isDark);
-                        this.updateToggleUI(isDark);
-                    },
-                    updateToggleUI(isDark) {
-                        if (!this._knob) return;
-                        this._knob.style.transform = isDark ? 'translateX(24px)' : 'translateX(0)';
-                        this._sun.classList.toggle('hidden', isDark);
-                        this._moon.classList.toggle('hidden', !isDark);
-                        const btn = document.getElementById('themeToggle');
-                        if (btn) btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                        if (!localStorage.getItem('theme')) this.apply(e.matches);
+                    });
+                },
+                apply(isDark) {
+                    document.documentElement.classList.toggle('dark', isDark);
+                    this.updateToggleUI(isDark);
+                },
+                updateToggleUI(isDark) {
+                    if (!this._knob) return;
+                    this._knob.style.transform = isDark ? 'translateX(24px)' : 'translateX(0)';
+                    this._sun.classList.toggle('hidden', isDark);
+                    this._moon.classList.toggle('hidden', !isDark);
+                    const btn = document.getElementById('themeToggle');
+                    if (btn) btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+                }
+            };
+
+            // ==========================================
+            // TOAST NOTIFICATIONS
+            // ==========================================
+            const Toast = {
+                show(message, type = 'success') {
+                    const container = document.getElementById('toastContainer');
+                    const colors = {
+                        success: 'bg-green-500',
+                        error: 'bg-red-500',
+                        info: 'bg-brand-500'
+                    };
+                    const icons = {
+                        success: `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>`,
+                        error: `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>`,
+                        info: `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
+                    };
+
+                    const toast = document.createElement('div');
+                    toast.className = `toast flex items-center gap-3 px-4 py-3 rounded-xl ${colors[type] || colors.info} text-white text-sm font-medium shadow-2xl`;
+                    if (icons[type]) {
+                        const iconFrag = document.createRange().createContextualFragment(icons[type]);
+                        toast.appendChild(iconFrag);
                     }
-                };
+                    const msgSpan = document.createElement('span');
+                    msgSpan.textContent = String(message);
+                    toast.appendChild(msgSpan);
+                    container.appendChild(toast);
+                    setTimeout(() => toast.remove(), 2200);
+                }
+            };
 
-                // ==========================================
-                // TOAST NOTIFICATIONS
-                // ==========================================
-                const Toast = {
-                    show(message, type = 'success') {
-                        const container = document.getElementById('toastContainer');
-                        const colors = {
-                            success: 'bg-green-500',
-                            error: 'bg-red-500',
-                            info: 'bg-brand-500'
-                        };
-                        const icons = {
-                            success: `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>`,
-                            error: `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>`,
-                            info: `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
-                        };
+            // ==========================================
+            // COLOR EXTRACTION ENGINE (Median Cut)
+            // ==========================================
+            const ColorEngine = {
+                extract(imageData, numColors = 8) {
+                    const pixels = [];
+                    const data = imageData.data;
+                    const step = Math.max(1, Math.floor(data.length / 4 / 10000));
 
-                        const toast = document.createElement('div');
-                        toast.className = `toast flex items-center gap-3 px-4 py-3 rounded-xl ${colors[type] || colors.info} text-white text-sm font-medium shadow-2xl`;
-                        if (icons[type]) {
-                            const iconFrag = document.createRange().createContextualFragment(icons[type]);
-                            toast.appendChild(iconFrag);
-                        }
-                        const msgSpan = document.createElement('span');
-                        msgSpan.textContent = String(message);
-                        toast.appendChild(msgSpan);
-                        container.appendChild(toast);
-                        setTimeout(() => toast.remove(), 2200);
+                    for (let i = 0; i < data.length; i += 4 * step) {
+                        const r = data[i], g = data[i + 1], b = data[i + 2], a = data[i + 3];
+                        if (a < 128) continue;
+                        if (r < 8 && g < 8 && b < 8) continue;
+                        if (r > 247 && g > 247 && b > 247) continue;
+                        pixels.push([r, g, b]);
                     }
-                };
 
-                // ==========================================
-                // COLOR EXTRACTION ENGINE (Median Cut)
-                // ==========================================
-                const ColorEngine = {
-                    extract(imageData, numColors = 8) {
-                        const pixels = [];
-                        const data = imageData.data;
-                        const step = Math.max(1, Math.floor(data.length / 4 / 10000));
+                    if (pixels.length === 0) return [];
 
-                        for (let i = 0; i < data.length; i += 4 * step) {
-                            const r = data[i], g = data[i + 1], b = data[i + 2], a = data[i + 3];
-                            if (a < 128) continue;
-                            if (r < 8 && g < 8 && b < 8) continue;
-                            if (r > 247 && g > 247 && b > 247) continue;
-                            pixels.push([r, g, b]);
-                        }
+                    const safeNum = Math.max(1, Math.min(numColors, 32));
+                    const depth = Math.ceil(Math.log2(Math.max(safeNum, 2)));
+                    const buckets = this.medianCut(pixels, depth);
+                    const colors = buckets
+                        .filter(bucket => bucket.length > 0)
+                        .map(bucket => this.averageColor(bucket))
+                        .slice(0, safeNum);
 
-                        if (pixels.length === 0) return [];
-
-                        const safeNum = Math.max(1, Math.min(numColors, 32));
-                        const depth = Math.ceil(Math.log2(Math.max(safeNum, 2)));
-                        const buckets = this.medianCut(pixels, depth);
-                        const colors = buckets
-                            .filter(bucket => bucket.length > 0)
-                            .map(bucket => this.averageColor(bucket))
-                            .slice(0, safeNum);
-
-                        // Deduplicate: remove colors too close to an already-kept color
-                        const DEDUP_THRESHOLD = 22;
-                        const unique = [];
-                        for (const c of colors) {
-                            const isDup = unique.some(u => {
-                                const dr = c[0] - u[0], dg = c[1] - u[1], db = c[2] - u[2];
-                                return Math.sqrt(dr * dr + dg * dg + db * db) < DEDUP_THRESHOLD;
-                            });
-                            if (!isDup) unique.push(c);
-                        }
-
-                        // Sort by perceptual luminance (dark to light)
-                        unique.sort((a, b) => {
-                            const lumA = 0.299 * a[0] + 0.587 * a[1] + 0.114 * a[2];
-                            const lumB = 0.299 * b[0] + 0.587 * b[1] + 0.114 * b[2];
-                            return lumA - lumB;
+                    // Deduplicate: remove colors too close to an already-kept color
+                    const DEDUP_THRESHOLD = 22;
+                    const unique = [];
+                    for (const c of colors) {
+                        const isDup = unique.some(u => {
+                            const dr = c[0] - u[0], dg = c[1] - u[1], db = c[2] - u[2];
+                            return Math.sqrt(dr * dr + dg * dg + db * db) < DEDUP_THRESHOLD;
                         });
+                        if (!isDup) unique.push(c);
+                    }
 
-                        // Pre-compute all representations once
-                        return unique.map(([r, g, b]) => ({
-                            r, g, b,
-                            hex: this.rgbToHex(r, g, b).toUpperCase(),
-                            rgb: `rgb(${r}, ${g}, ${b})`,
-                            hsl: this.rgbToHsl(r, g, b),
-                            contrast: this.wcagContrast(r, g, b),
-                            contrastLabel: this.getContrastColor(r, g, b)
-                        }));
-                    },
+                    // Sort by perceptual luminance (dark to light)
+                    unique.sort((a, b) => {
+                        const lumA = 0.299 * a[0] + 0.587 * a[1] + 0.114 * a[2];
+                        const lumB = 0.299 * b[0] + 0.587 * b[1] + 0.114 * b[2];
+                        return lumA - lumB;
+                    });
 
-                    medianCut(pixels, depth) {
-                        if (depth <= 0 || pixels.length === 0) return [pixels];
-                        if (pixels.length <= 1) return [pixels];
+                    // Pre-compute all representations once
+                    return unique.map(([r, g, b]) => ({
+                        r, g, b,
+                        hex: this.rgbToHex(r, g, b).toUpperCase(),
+                        rgb: `rgb(${r}, ${g}, ${b})`,
+                        hsl: this.rgbToHsl(r, g, b),
+                        contrast: this.wcagContrast(r, g, b),
+                        contrastLabel: this.getContrastColor(r, g, b)
+                    }));
+                },
 
-                        const ranges = [0, 1, 2].map(ch => {
-                            let min = 255, max = 0;
-                            for (let j = 0; j < pixels.length; j++) {
-                                const v = pixels[j][ch];
-                                if (v < min) min = v;
-                                if (v > max) max = v;
-                            }
-                            return max - min;
-                        });
+                medianCut(pixels, depth) {
+                    if (depth <= 0 || pixels.length === 0) return [pixels];
+                    if (pixels.length <= 1) return [pixels];
 
-                        const maxChannel = ranges.indexOf(Math.max(...ranges));
-                        const sortedPixels = [...pixels].sort((a, b) => a[maxChannel] - b[maxChannel]);
-
-                        const mid = Math.floor(sortedPixels.length / 2);
-                        const left = sortedPixels.slice(0, mid);
-                        const right = sortedPixels.slice(mid);
-
-                        return [
-                            ...this.medianCut(left, depth - 1),
-                            ...this.medianCut(right, depth - 1)
-                        ];
-                    },
-
-                    averageColor(pixels) {
-                        if (pixels.length === 0) return [0, 0, 0];
-                        let r = 0, g = 0, b = 0;
-                        for (let i = 0; i < pixels.length; i++) {
-                            r += pixels[i][0]; g += pixels[i][1]; b += pixels[i][2];
+                    const ranges = [0, 1, 2].map(ch => {
+                        let min = 255, max = 0;
+                        for (let j = 0; j < pixels.length; j++) {
+                            const v = pixels[j][ch];
+                            if (v < min) min = v;
+                            if (v > max) max = v;
                         }
-                        const n = pixels.length;
-                        return [Math.round(r / n), Math.round(g / n), Math.round(b / n)];
-                    },
+                        return max - min;
+                    });
 
-                    rgbToHex(r, g, b) {
-                        return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
-                    },
+                    const maxChannel = ranges.indexOf(Math.max(...ranges));
+                    const sortedPixels = [...pixels].sort((a, b) => a[maxChannel] - b[maxChannel]);
 
-                    rgbToHsl(r, g, b) {
-                        r /= 255; g /= 255; b /= 255;
-                        const max = Math.max(r, g, b), min = Math.min(r, g, b);
-                        let h, s, l = (max + min) / 2;
+                    const mid = Math.floor(sortedPixels.length / 2);
+                    const left = sortedPixels.slice(0, mid);
+                    const right = sortedPixels.slice(mid);
 
-                        if (max === min) {
-                            h = s = 0;
-                        } else {
-                            const d = max - min;
-                            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-                            switch (max) {
-                                case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
-                                case g: h = ((b - r) / d + 2) / 6; break;
-                                case b: h = ((r - g) / d + 4) / 6; break;
-                            }
+                    return [
+                        ...this.medianCut(left, depth - 1),
+                        ...this.medianCut(right, depth - 1)
+                    ];
+                },
+
+                averageColor(pixels) {
+                    if (pixels.length === 0) return [0, 0, 0];
+                    let r = 0, g = 0, b = 0;
+                    for (let i = 0; i < pixels.length; i++) {
+                        r += pixels[i][0]; g += pixels[i][1]; b += pixels[i][2];
+                    }
+                    const n = pixels.length;
+                    return [Math.round(r / n), Math.round(g / n), Math.round(b / n)];
+                },
+
+                rgbToHex(r, g, b) {
+                    return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+                },
+
+                rgbToHsl(r, g, b) {
+                    r /= 255; g /= 255; b /= 255;
+                    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+                    let h, s, l = (max + min) / 2;
+
+                    if (max === min) {
+                        h = s = 0;
+                    } else {
+                        const d = max - min;
+                        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                        switch (max) {
+                            case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+                            case g: h = ((b - r) / d + 2) / 6; break;
+                            case b: h = ((r - g) / d + 4) / 6; break;
                         }
+                    }
 
-                        return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
-                    },
+                    return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
+                },
 
-                    getContrastColor(r, g, b) {
-                        const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-                        return lum > 0.5 ? '#1a1a2e' : '#ffffff';
-                    },
+                getContrastColor(r, g, b) {
+                    const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+                    return lum > 0.5 ? '#1a1a2e' : '#ffffff';
+                },
 
-                    wcagContrast(r, g, b) {
-                        // Returns contrast ratio against white and black per WCAG 2.1
-                        const toLinear = c => { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
-                        const L = 0.2126 * toLinear(r) + 0.7152 * toLinear(g) + 0.0722 * toLinear(b);
-                        const contrastWhite = (1.05) / (L + 0.05);
-                        const contrastBlack = (L + 0.05) / (0.05);
-                        return { white: +contrastWhite.toFixed(1), black: +contrastBlack.toFixed(1) };
-                    },
+                wcagContrast(r, g, b) {
+                    // Returns contrast ratio against white and black per WCAG 2.1
+                    const toLinear = c => { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+                    const L = 0.2126 * toLinear(r) + 0.7152 * toLinear(g) + 0.0722 * toLinear(b);
+                    const contrastWhite = (1.05) / (L + 0.05);
+                    const contrastBlack = (L + 0.05) / (0.05);
+                    return { white: +contrastWhite.toFixed(1), black: +contrastBlack.toFixed(1) };
+                },
 
-                    formatColor(c, format) {
-                        // Accept both rich {r,g,b,hex,rgb,hsl} objects and legacy [r,g,b] arrays
-                        if (Array.isArray(c)) {
-                            const [r, g, b] = c;
-                            switch (format) {
-                                case 'hex': return this.rgbToHex(r, g, b).toUpperCase();
-                                case 'rgb': return `rgb(${r}, ${g}, ${b})`;
-                                case 'hsl': return this.rgbToHsl(r, g, b);
-                                default: return this.rgbToHex(r, g, b).toUpperCase();
-                            }
-                        }
+                formatColor(c, format) {
+                    // Accept both rich {r,g,b,hex,rgb,hsl} objects and legacy [r,g,b] arrays
+                    if (Array.isArray(c)) {
+                        const [r, g, b] = c;
                         switch (format) {
-                            case 'hex': return c.hex;
-                            case 'rgb': return c.rgb;
-                            case 'hsl': return c.hsl;
-                            default: return c.hex;
+                            case 'hex': return this.rgbToHex(r, g, b).toUpperCase();
+                            case 'rgb': return `rgb(${r}, ${g}, ${b})`;
+                            case 'hsl': return this.rgbToHsl(r, g, b);
+                            default: return this.rgbToHex(r, g, b).toUpperCase();
                         }
                     }
-                };
+                    switch (format) {
+                        case 'hex': return c.hex;
+                        case 'rgb': return c.rgb;
+                        case 'hsl': return c.hsl;
+                        default: return c.hex;
+                    }
+                }
+            };
 
-                // ==========================================
-                // UI CONTROLLER
-                // ==========================================
-                const UI = {
-                    currentFormat: 'hex',
-                    extractedColors: [],
-                    currentImage: null,
-                    isProcessing: false,
-                    _previewObjectURL: null,
-                    elements: {},
+            // ==========================================
+            // UI CONTROLLER
+            // ==========================================
+            const UI = {
+                currentFormat: 'hex',
+                extractedColors: [],
+                currentImage: null,
+                isProcessing: false,
+                _previewObjectURL: null,
+                elements: {},
 
-                    init() {
-                        this.cacheElements();
-                        this.bindEvents();
-                    },
+                init() {
+                    this.cacheElements();
+                    this.bindEvents();
+                },
 
-                    cacheElements() {
-                        this.elements = {
-                            dropZone: document.getElementById('dropZone'),
-                            fileInput: document.getElementById('fileInput'),
-                            uploadPrompt: document.getElementById('uploadPrompt'),
-                            imagePreviewContainer: document.getElementById('imagePreviewContainer'),
-                            imagePreview: document.getElementById('imagePreview'),
-                            imageName: document.getElementById('imageName'),
-                            removeImage: document.getElementById('removeImage'),
-                            processingBar: document.getElementById('processingBar'),
-                            resultsSection: document.getElementById('resultsSection'),
-                            colorGrid: document.getElementById('colorGrid'),
-                            paletteBar: document.getElementById('paletteBar'),
-                            colorCount: document.getElementById('colorCount'),
-                            exportAllBtn: document.getElementById('exportAllBtn'),
-                            canvas: document.getElementById('hiddenCanvas')
-                        };
-                    },
+                cacheElements() {
+                    this.elements = {
+                        dropZone: document.getElementById('dropZone'),
+                        fileInput: document.getElementById('fileInput'),
+                        uploadPrompt: document.getElementById('uploadPrompt'),
+                        imagePreviewContainer: document.getElementById('imagePreviewContainer'),
+                        imagePreview: document.getElementById('imagePreview'),
+                        imageName: document.getElementById('imageName'),
+                        removeImage: document.getElementById('removeImage'),
+                        processingBar: document.getElementById('processingBar'),
+                        resultsSection: document.getElementById('resultsSection'),
+                        colorGrid: document.getElementById('colorGrid'),
+                        paletteBar: document.getElementById('paletteBar'),
+                        colorCount: document.getElementById('colorCount'),
+                        exportAllBtn: document.getElementById('exportAllBtn'),
+                        canvas: document.getElementById('hiddenCanvas')
+                    };
+                },
 
-                    bindEvents() {
-                        const { dropZone, fileInput, removeImage, exportAllBtn } = this.elements;
+                bindEvents() {
+                    const { dropZone, fileInput, removeImage, exportAllBtn } = this.elements;
 
-                        // File input — skip if image already loaded (avoid re-opening picker on preview click)
-                        dropZone.addEventListener('click', () => {
-                            if (this.currentImage) return;
-                            fileInput.click();
-                        });
-                        dropZone.addEventListener('keydown', (e) => {
-                            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
-                        });
-                        fileInput.addEventListener('change', (e) => this.handleFile(e.target.files[0]));
+                    // File input — skip if image already loaded (avoid re-opening picker on preview click)
+                    dropZone.addEventListener('click', () => {
+                        if (this.currentImage) return;
+                        fileInput.click();
+                    });
+                    dropZone.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
+                    });
+                    fileInput.addEventListener('change', (e) => this.handleFile(e.target.files[0]));
 
-                        // Drag & Drop — consolidated to single listener per event
-                        dropZone.addEventListener('dragenter', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
-                        dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
-                        dropZone.addEventListener('dragleave', e => { e.preventDefault(); dropZone.classList.remove('drag-over'); });
-                        dropZone.addEventListener('drop', e => {
-                            e.preventDefault();
-                            dropZone.classList.remove('drag-over');
-                            const file = e.dataTransfer?.files[0];
-                            if (file && file.type.startsWith('image/')) this.handleFile(file);
-                            else Toast.show('Please drop a valid image file.', 'error');
-                        });
+                    // Drag & Drop — consolidated to single listener per event
+                    dropZone.addEventListener('dragenter', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+                    dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+                    dropZone.addEventListener('dragleave', e => { e.preventDefault(); dropZone.classList.remove('drag-over'); });
+                    dropZone.addEventListener('drop', e => {
+                        e.preventDefault();
+                        dropZone.classList.remove('drag-over');
+                        const file = e.dataTransfer?.files[0];
+                        if (file && file.type.startsWith('image/')) this.handleFile(file);
+                        else Toast.show('Please drop a valid image file.', 'error');
+                    });
 
-                        // Remove image
-                        removeImage.addEventListener('click', (e) => { e.stopPropagation(); this.reset(); });
+                    // Remove image
+                    removeImage.addEventListener('click', (e) => { e.stopPropagation(); this.reset(); });
 
-                        // Format tabs
-                        document.querySelectorAll('.format-tab').forEach(tab => {
-                            tab.addEventListener('click', () => {
-                                this.currentFormat = tab.dataset.format;
-                                document.querySelectorAll('.format-tab').forEach(t => {
-                                    t.classList.remove('active');
-                                    t.setAttribute('aria-checked', 'false');
-                                });
-                                tab.classList.add('active');
-                                tab.setAttribute('aria-checked', 'true');
-                                this.renderColors();
+                    // Format tabs
+                    document.querySelectorAll('.format-tab').forEach(tab => {
+                        tab.addEventListener('click', () => {
+                            this.currentFormat = tab.dataset.format;
+                            document.querySelectorAll('.format-tab').forEach(t => {
+                                t.classList.remove('active');
+                                t.setAttribute('aria-checked', 'false');
                             });
+                            tab.classList.add('active');
+                            tab.setAttribute('aria-checked', 'true');
+                            this.renderColors();
                         });
+                    });
 
-                        // Palette size selector — re-extract on change
-                        const paletteSel = document.getElementById('paletteSizeSelect');
-                        if (paletteSel) paletteSel.addEventListener('change', () => { if (this.currentImage) this.processImage(this.currentImage); });
+                    // Palette size selector — re-extract on change
+                    const paletteSel = document.getElementById('paletteSizeSelect');
+                    if (paletteSel) paletteSel.addEventListener('change', () => { if (this.currentImage) this.processImage(this.currentImage); });
 
-                        // Export
-                        exportAllBtn.addEventListener('click', () => this.exportPalette());
+                    // Export
+                    exportAllBtn.addEventListener('click', () => this.exportPalette());
 
-                        // URL load
-                        const urlBtn = document.getElementById('loadUrlBtn');
-                        const urlIn = document.getElementById('urlInput');
-                        if (urlBtn && urlIn) {
-                            const doLoad = () => {
-                                const u = urlIn.value.trim();
-                                if (!u) return;
-                                if (!/^https?:\/\/.+/i.test(u)) { Toast.show('Enter a valid https:// URL', 'error'); return; }
-                                this.loadFromUrl(u);
-                            };
-                            urlBtn.addEventListener('click', doLoad);
-                            urlIn.addEventListener('keydown', e => { if (e.key === 'Enter') doLoad(); });
-                        }
-
-                        // Paste from clipboard
-                        let pasteTimeout = null;
-                        document.addEventListener('paste', (e) => {
-                            const items = e.clipboardData?.items;
-                            if (!items) return;
-                            if (pasteTimeout) return;
-
-                            pasteTimeout = setTimeout(() => { pasteTimeout = null; }, 500);
-                            for (const item of items) {
-                                if (item.type.startsWith('image/')) {
-                                    const file = item.getAsFile();
-                                    if (file) { this.handleFile(file); break; }
-                                }
-                            }
-                        });
-                    },
-
-                    loadFromUrl(url) {
-                        if (this.isProcessing) { Toast.show('Processing in progress...', 'info'); return; }
-                        Toast.show('Loading image...', 'info');
-                        const displayName = url.split('/').pop().split('?')[0] || 'url-image';
-                        const tryLoad = (withCors) => {
-                            const img = new Image();
-                            if (withCors) img.crossOrigin = 'anonymous';
-                            img.onload = () => {
-                                this.currentImage = img;
-                                this.showPreview(url, displayName);
-                                this.processImage(img);
-                                const urlInput = document.getElementById('urlInput');
-                                if (urlInput) urlInput.value = '';
-                            };
-                            img.onerror = () => {
-                                if (!withCors) {
-                                    // First pass failed without CORS — retry with crossOrigin=anonymous
-                                    tryLoad(true);
-                                } else {
-                                    this.isProcessing = false;
-                                    Toast.show('Failed to load URL — image may be unavailable or CORS-blocked.', 'error');
-                                }
-                            };
-                            img.src = url;
+                    // URL load
+                    const urlBtn = document.getElementById('loadUrlBtn');
+                    const urlIn = document.getElementById('urlInput');
+                    if (urlBtn && urlIn) {
+                        const doLoad = () => {
+                            const u = urlIn.value.trim();
+                            if (!u) return;
+                            if (!/^https?:\/\/.+/i.test(u)) { Toast.show('Enter a valid https:// URL', 'error'); return; }
+                            this.loadFromUrl(u);
                         };
-                        tryLoad(false);
-                    },
+                        urlBtn.addEventListener('click', doLoad);
+                        urlIn.addEventListener('keydown', e => { if (e.key === 'Enter') doLoad(); });
+                    }
 
-                    handleFile(file) {
-                        if (!file) return;
-                        if (this.isProcessing) { Toast.show('Processing in progress, please wait...', 'info'); return; }
-                        if (!file.type.startsWith('image/')) {
-                            Toast.show('Invalid file type. Please upload an image.', 'error');
-                            return;
-                        }
-                        if (file.size > 10 * 1024 * 1024) {
-                            Toast.show('File too large. Max 10MB allowed.', 'error');
-                            return;
-                        }
+                    // Paste from clipboard
+                    let pasteTimeout = null;
+                    document.addEventListener('paste', (e) => {
+                        const items = e.clipboardData?.items;
+                        if (!items) return;
+                        if (pasteTimeout) return;
 
-                        // Use object URL (no base64 33% overhead vs DataURL)
-                        const objectURL = URL.createObjectURL(file);
+                        pasteTimeout = setTimeout(() => { pasteTimeout = null; }, 500);
+                        for (const item of items) {
+                            if (item.type.startsWith('image/')) {
+                                const file = item.getAsFile();
+                                if (file) { this.handleFile(file); break; }
+                            }
+                        }
+                    });
+                },
+
+                loadFromUrl(url) {
+                    if (this.isProcessing) { Toast.show('Processing in progress...', 'info'); return; }
+                    Toast.show('Loading image...', 'info');
+                    const displayName = url.split('/').pop().split('?')[0] || 'url-image';
+                    const tryLoad = (withCors) => {
                         const img = new Image();
+                        if (withCors) img.crossOrigin = 'anonymous';
                         img.onload = () => {
                             this.currentImage = img;
-                            this._previewObjectURL = objectURL; // track for cleanup in reset()
-                            this.showPreview(objectURL, file.name);
+                            this.showPreview(url, displayName);
                             this.processImage(img);
+                            const urlInput = document.getElementById('urlInput');
+                            if (urlInput) urlInput.value = '';
                         };
                         img.onerror = () => {
-                            URL.revokeObjectURL(objectURL);
-                            this.isProcessing = false;
-                            this.reset();
-                            Toast.show('Failed to load image — file may be corrupt or unsupported.', 'error');
+                            if (!withCors) {
+                                // First pass failed without CORS — retry with crossOrigin=anonymous
+                                tryLoad(true);
+                            } else {
+                                this.isProcessing = false;
+                                Toast.show('Failed to load URL — image may be unavailable or CORS-blocked.', 'error');
+                            }
                         };
-                        img.src = objectURL;
-                    },
+                        img.src = url;
+                    };
+                    tryLoad(false);
+                },
 
-                    showPreview(src, name) {
-                        const { uploadPrompt, imagePreviewContainer, imagePreview, imageName } = this.elements;
-                        uploadPrompt.classList.add('hidden');
-                        imagePreviewContainer.classList.remove('hidden');
-                        imagePreview.src = src;
-                        imageName.textContent = name.length > 30 ? name.substring(0, 27) + '...' : name;
-                    },
+                handleFile(file) {
+                    if (!file) return;
+                    if (this.isProcessing) { Toast.show('Processing in progress, please wait...', 'info'); return; }
+                    if (!file.type.startsWith('image/')) {
+                        Toast.show('Invalid file type. Please upload an image.', 'error');
+                        return;
+                    }
+                    if (file.size > 10 * 1024 * 1024) {
+                        Toast.show('File too large. Max 10MB allowed.', 'error');
+                        return;
+                    }
 
-                    processImage(img) {
-                        this.isProcessing = true;
-                        const { canvas, processingBar } = this.elements;
-                        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+                    // Use object URL (no base64 33% overhead vs DataURL)
+                    const objectURL = URL.createObjectURL(file);
+                    const img = new Image();
+                    img.onload = () => {
+                        this.currentImage = img;
+                        this._previewObjectURL = objectURL; // track for cleanup in reset()
+                        this.showPreview(objectURL, file.name);
+                        this.processImage(img);
+                    };
+                    img.onerror = () => {
+                        URL.revokeObjectURL(objectURL);
+                        this.isProcessing = false;
+                        this.reset();
+                        Toast.show('Failed to load image — file may be corrupt or unsupported.', 'error');
+                    };
+                    img.src = objectURL;
+                },
 
-                        // Scale down for performance
-                        if (!img.width || !img.height) {
-                            Toast.show('Image has invalid dimensions.', 'error');
-                            this.isProcessing = false;
-                            return;
-                        }
-                        const maxDim = 300;
-                        const scale = Math.min(maxDim / img.width, maxDim / img.height, 1);
-                        canvas.width = Math.max(1, Math.round(img.width * scale));
-                        canvas.height = Math.max(1, Math.round(img.height * scale));
-                        ctx.clearRect(0, 0, canvas.width, canvas.height);
-                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                showPreview(src, name) {
+                    const { uploadPrompt, imagePreviewContainer, imagePreview, imageName } = this.elements;
+                    uploadPrompt.classList.add('hidden');
+                    imagePreviewContainer.classList.remove('hidden');
+                    imagePreview.src = src;
+                    imageName.textContent = name.length > 30 ? name.substring(0, 27) + '...' : name;
+                },
 
-                        // Show processing
-                        processingBar.classList.remove('hidden');
-                        const progressEl = processingBar.querySelector('.progress-bar');
-                        progressEl.style.width = '30%';
+                processImage(img) {
+                    this.isProcessing = true;
+                    const { canvas, processingBar } = this.elements;
+                    const ctx = canvas.getContext('2d', { willReadFrequently: true });
 
-                        requestAnimationFrame(() => {
-                            progressEl.style.width = '70%';
+                    // Scale down for performance
+                    if (!img.width || !img.height) {
+                        Toast.show('Image has invalid dimensions.', 'error');
+                        this.isProcessing = false;
+                        return;
+                    }
+                    const maxDim = 300;
+                    const scale = Math.min(maxDim / img.width, maxDim / img.height, 1);
+                    canvas.width = Math.max(1, Math.round(img.width * scale));
+                    canvas.height = Math.max(1, Math.round(img.height * scale));
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                    // Show processing
+                    processingBar.classList.remove('hidden');
+                    const progressEl = processingBar.querySelector('.progress-bar');
+                    progressEl.style.width = '30%';
+
+                    requestAnimationFrame(() => {
+                        progressEl.style.width = '70%';
+
+                        setTimeout(() => {
+                            let imageData;
+                            try {
+                                imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                            } catch {
+                                processingBar.classList.add('hidden');
+                                this.isProcessing = false;
+                                Toast.show('Cannot read this image — possible CORS restriction.', 'error');
+                                return;
+                            }
+                            const numColors = parseInt((document.getElementById('paletteSizeSelect') || {}).value) || 8;
+                            this.extractedColors = ColorEngine.extract(imageData, numColors);
+                            progressEl.style.width = '100%';
 
                             setTimeout(() => {
-                                let imageData;
-                                try {
-                                    imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                                } catch {
-                                    processingBar.classList.add('hidden');
-                                    this.isProcessing = false;
-                                    Toast.show('Cannot read this image — possible CORS restriction.', 'error');
+                                processingBar.classList.add('hidden');
+                                progressEl.style.width = '0%';
+                                this.isProcessing = false;
+                                if (this.extractedColors.length === 0) {
+                                    Toast.show('No colors found — image may be fully transparent or solid black/white.', 'error');
                                     return;
                                 }
-                                const numColors = parseInt((document.getElementById('paletteSizeSelect') || {}).value) || 8;
-                                this.extractedColors = ColorEngine.extract(imageData, numColors);
-                                progressEl.style.width = '100%';
+                                this.renderColors();
+                                this.elements.resultsSection.classList.remove('hidden');
+                                this.elements.resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                Toast.show(`${this.extractedColors.length} colors extracted!`, 'success');
+                            }, 400);
+                        }, 200);
+                    });
+                },
 
-                                setTimeout(() => {
-                                    processingBar.classList.add('hidden');
-                                    progressEl.style.width = '0%';
-                                    this.isProcessing = false;
-                                    if (this.extractedColors.length === 0) {
-                                        Toast.show('No colors found — image may be fully transparent or solid black/white.', 'error');
-                                        return;
-                                    }
-                                    this.renderColors();
-                                    this.elements.resultsSection.classList.remove('hidden');
-                                    this.elements.resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    Toast.show(`${this.extractedColors.length} colors extracted!`, 'success');
-                                }, 400);
-                            }, 200);
-                        });
-                    },
+                renderColors() {
+                    const { colorGrid, paletteBar, colorCount } = this.elements;
+                    const colors = this.extractedColors;
+                    if (!colors || colors.length === 0) return;
+                    const format = this.currentFormat;
 
-                    renderColors() {
-                        const { colorGrid, paletteBar, colorCount } = this.elements;
-                        const colors = this.extractedColors;
-                        if (!colors || colors.length === 0) return;
-                        const format = this.currentFormat;
+                    colorCount.textContent = `${colors.length} dominant colors found`;
 
-                        colorCount.textContent = `${colors.length} dominant colors found`;
-
-                        // Render grid
-                        colorGrid.innerHTML = colors.map((c, i) => {
-                            const displayValue = format === 'hex' ? c.hex : format === 'rgb' ? c.rgb : c.hsl;
-                            // WCAG badge: show best contrast ratio (against white or black)
-                            const aaWhite = c.contrast.white >= 4.5, aaaWhite = c.contrast.white >= 7;
-                            const aaBlack = c.contrast.black >= 4.5, aaaBlack = c.contrast.black >= 7;
-                            const wcagBest = aaaWhite ? 'AAA' : aaaBlack ? 'AAA' : aaWhite ? 'AA' : aaBlack ? 'AA' : '-';
-                            const wcagColor = wcagBest === 'AAA' ? 'bg-green-500' : wcagBest === 'AA' ? 'bg-blue-500' : 'bg-gray-400';
-                            return `
+                    // Render grid
+                    colorGrid.innerHTML = colors.map((c, i) => {
+                        const displayValue = format === 'hex' ? c.hex : format === 'rgb' ? c.rgb : c.hsl;
+                        // WCAG badge: show best contrast ratio (against white or black)
+                        const aaWhite = c.contrast.white >= 4.5, aaaWhite = c.contrast.white >= 7;
+                        const aaBlack = c.contrast.black >= 4.5, aaaBlack = c.contrast.black >= 7;
+                        const wcagBest = aaaWhite ? 'AAA' : aaaBlack ? 'AAA' : aaWhite ? 'AA' : aaBlack ? 'AA' : '-';
+                        const wcagColor = wcagBest === 'AAA' ? 'bg-green-500' : wcagBest === 'AA' ? 'bg-blue-500' : 'bg-gray-400';
+                        return `
                         <div class="color-swatch rounded-2xl overflow-hidden bg-white dark:bg-gray-900 shadow-md hover:shadow-xl cursor-pointer border border-gray-100 dark:border-gray-800"
                              data-ci="${i}" tabindex="0" role="button" aria-label="Copy color ${displayValue}">
                             <div class="h-28 sm:h-36 relative" style="background-color: ${c.hex}">
                                 <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200"
                                      style="background: rgba(0,0,0,0.15)">
                                     <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg" style="background: rgba(0,0,0,0.4)">
-                                        <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <svg class="w-4 h-4 text-white" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
                                         </svg>
                                         <span class="text-white text-xs font-semibold">Click to Copy</span>
@@ -1379,146 +1383,146 @@
                             </div>
                         </div>
                     `;
-                        }).join('');
+                    }).join('');
 
-                        // Render palette bar
-                        paletteBar.innerHTML = colors.map((c, ci) =>
-                            `<div class="flex-1 cursor-pointer hover:flex-[2] transition-all duration-300" style="background-color: ${c.hex}" title="${c.hex}" data-ci="${ci}"></div>`
-                        ).join('');
+                    // Render palette bar
+                    paletteBar.innerHTML = colors.map((c, ci) =>
+                        `<div class="flex-1 cursor-pointer hover:flex-[2] transition-all duration-300" style="background-color: ${c.hex}" title="${c.hex}" data-ci="${ci}"></div>`
+                    ).join('');
 
-                        // Click handlers — read color by index into extractedColors (always fresh)
-                        const getDisplay = ci => {
-                            const c = this.extractedColors[ci];
-                            if (!c) return '';
-                            return this.currentFormat === 'hex' ? c.hex
-                                : this.currentFormat === 'rgb' ? c.rgb : c.hsl;
-                        };
-                        colorGrid.querySelectorAll('.color-swatch').forEach(swatch => {
-                            const ci = parseInt(swatch.dataset.ci);
-                            const handler = () => this.copyToClipboard(getDisplay(ci));
-                            swatch.addEventListener('click', handler);
-                            swatch.addEventListener('keydown', e => {
-                                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
-                            });
+                    // Click handlers — read color by index into extractedColors (always fresh)
+                    const getDisplay = ci => {
+                        const c = this.extractedColors[ci];
+                        if (!c) return '';
+                        return this.currentFormat === 'hex' ? c.hex
+                            : this.currentFormat === 'rgb' ? c.rgb : c.hsl;
+                    };
+                    colorGrid.querySelectorAll('.color-swatch').forEach(swatch => {
+                        const ci = parseInt(swatch.dataset.ci);
+                        const handler = () => this.copyToClipboard(getDisplay(ci));
+                        swatch.addEventListener('click', handler);
+                        swatch.addEventListener('keydown', e => {
+                            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
                         });
-                        paletteBar.querySelectorAll('div').forEach(bar => {
-                            const ci = parseInt(bar.dataset.ci);
-                            bar.addEventListener('click', () => this.copyToClipboard(getDisplay(ci)));
-                        });
-                    },
+                    });
+                    paletteBar.querySelectorAll('div').forEach(bar => {
+                        const ci = parseInt(bar.dataset.ci);
+                        bar.addEventListener('click', () => this.copyToClipboard(getDisplay(ci)));
+                    });
+                },
 
-                    async copyToClipboard(text) {
+                async copyToClipboard(text) {
+                    try {
+                        await navigator.clipboard.writeText(text);
+                        Toast.show(`Copied: ${text}`, 'success');
+                    } catch {
                         try {
-                            await navigator.clipboard.writeText(text);
-                            Toast.show(`Copied: ${text}`, 'success');
-                        } catch {
-                            try {
-                                const ta = document.createElement('textarea');
-                                ta.value = text;
-                                ta.style.cssText = 'position:fixed;opacity:0;left:-9999px;top:-9999px';
-                                document.body.appendChild(ta);
-                                ta.focus(); ta.select();
-                                const ok = document.execCommand('copy');
-                                document.body.removeChild(ta);
-                                if (ok) Toast.show(`Copied: ${text}`, 'success');
-                                else Toast.show(`Copy failed — select manually: ${text}`, 'error');
-                            } catch { Toast.show(`Copy failed — select manually: ${text}`, 'error'); }
-                        }
-                    },
-
-                    exportPalette() {
-                        if (!this.extractedColors || this.extractedColors.length === 0) {
-                            Toast.show('Upload an image first to export.', 'error');
-                            return;
-                        }
-                        const lines = this.extractedColors.map((c, i) =>
-                            `Color ${i + 1}: ${c.hex} | ${c.rgb} | ${c.hsl} | WCAG vs White: ${c.contrast.white}:1 | vs Black: ${c.contrast.black}:1`
-                        );
-
-                        const output = [
-                            '╔══════════════════════════════════════════╗',
-                            '║   Pro Color Extractor — Palette Export   ║',
-                            '║   https://oathanrex.github.io            ║',
-                            '╚══════════════════════════════════════════╝',
-                            '',
-                            `Extracted: ${new Date().toLocaleString()}`,
-                            `Colors: ${this.extractedColors.length}`,
-                            '',
-                            '──────────────────────────────────────────',
-                            ...lines,
-                            '──────────────────────────────────────────',
-                            '',
-                            'CSS Variables:',
-                            ':root {',
-                            ...this.extractedColors.map((c, i) => `  --color-${i + 1}: ${c.hex};`),
-                            '}',
-                            '',
-                            'Tailwind Config (extend.colors):',
-                            '{',
-                            ...this.extractedColors.map((c, i) => `  'palette-${i + 1}': '${c.hex}',`),
-                            '}',
-                            '',
-                            'SCSS Variables:',
-                            ...this.extractedColors.map((c, i) => `$color-${i + 1}: ${c.hex};`),
-                            '',
-                            'JSON:',
-                            JSON.stringify({
-                                palette: this.extractedColors.map((c, i) => ({
-                                    id: i + 1,
-                                    hex: c.hex, rgb: c.rgb, hsl: c.hsl,
-                                    wcag: { vsWhite: c.contrast.white, vsBlack: c.contrast.black }
-                                })),
-                                generatedBy: 'Pro Color Extractor',
-                                url: 'https://oathanrex.github.io/pro-color-extractor/',
-                                exportedAt: new Date().toISOString()
-                            }, null, 2),
-                        ].join('\n');
-
-                        const blob = new Blob([output], { type: 'text/plain' });
-                        const url = URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = `palette-${Date.now()}.txt`;
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                        setTimeout(() => URL.revokeObjectURL(url), 1000);
-                        Toast.show('Palette exported!', 'success');
-                    },
-
-                    reset() {
-                        const { uploadPrompt, imagePreviewContainer, imagePreview, resultsSection, fileInput } = this.elements;
-                        uploadPrompt.classList.remove('hidden');
-                        imagePreviewContainer.classList.add('hidden');
-                        resultsSection.classList.add('hidden');
-                        if (this._previewObjectURL) {
-                            URL.revokeObjectURL(this._previewObjectURL);
-                            this._previewObjectURL = null;
-                        }
-                        imagePreview.src = '';
-                        fileInput.value = '';
-                        this.extractedColors = [];
-                        this.currentImage = null;
-                        this.isProcessing = false;
-                        this.currentFormat = 'hex';
-                        document.querySelectorAll('.format-tab').forEach(t => t.classList.remove('active'));
-                        const hexTab = document.querySelector('[data-format="hex"]');
-                        if (hexTab) hexTab.classList.add('active');
-                        // Free GPU memory
-                        const canvas = this.elements.canvas;
-                        if (canvas) { canvas.width = 0; canvas.height = 0; }
+                            const ta = document.createElement('textarea');
+                            ta.value = text;
+                            ta.style.cssText = 'position:fixed;opacity:0;left:-9999px;top:-9999px';
+                            document.body.appendChild(ta);
+                            ta.focus(); ta.select();
+                            const ok = document.execCommand('copy');
+                            document.body.removeChild(ta);
+                            if (ok) Toast.show(`Copied: ${text}`, 'success');
+                            else Toast.show(`Copy failed — select manually: ${text}`, 'error');
+                        } catch { Toast.show(`Copy failed — select manually: ${text}`, 'error'); }
                     }
-                };
+                },
 
-                // ==========================================
-                // INITIALIZE
-                // ==========================================
-                document.addEventListener('DOMContentLoaded', () => {
-                    ThemeManager.init();
-                    UI.init();
-                });
+                exportPalette() {
+                    if (!this.extractedColors || this.extractedColors.length === 0) {
+                        Toast.show('Upload an image first to export.', 'error');
+                        return;
+                    }
+                    const lines = this.extractedColors.map((c, i) =>
+                        `Color ${i + 1}: ${c.hex} | ${c.rgb} | ${c.hsl} | WCAG vs White: ${c.contrast.white}:1 | vs Black: ${c.contrast.black}:1`
+                    );
 
-            })();
+                    const output = [
+                        '╔══════════════════════════════════════════╗',
+                        '║   Pro Color Extractor — Palette Export   ║',
+                        '║   https://oathanrex.github.io            ║',
+                        '╚══════════════════════════════════════════╝',
+                        '',
+                        `Extracted: ${new Date().toLocaleString()}`,
+                        `Colors: ${this.extractedColors.length}`,
+                        '',
+                        '──────────────────────────────────────────',
+                        ...lines,
+                        '──────────────────────────────────────────',
+                        '',
+                        'CSS Variables:',
+                        ':root {',
+                        ...this.extractedColors.map((c, i) => `  --color-${i + 1}: ${c.hex};`),
+                        '}',
+                        '',
+                        'Tailwind Config (extend.colors):',
+                        '{',
+                        ...this.extractedColors.map((c, i) => `  'palette-${i + 1}': '${c.hex}',`),
+                        '}',
+                        '',
+                        'SCSS Variables:',
+                        ...this.extractedColors.map((c, i) => `$color-${i + 1}: ${c.hex};`),
+                        '',
+                        'JSON:',
+                        JSON.stringify({
+                            palette: this.extractedColors.map((c, i) => ({
+                                id: i + 1,
+                                hex: c.hex, rgb: c.rgb, hsl: c.hsl,
+                                wcag: { vsWhite: c.contrast.white, vsBlack: c.contrast.black }
+                            })),
+                            generatedBy: 'Pro Color Extractor',
+                            url: 'https://oathanrex.github.io/pro-color-extractor/',
+                            exportedAt: new Date().toISOString()
+                        }, null, 2),
+                    ].join('\n');
+
+                    const blob = new Blob([output], { type: 'text/plain' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `palette-${Date.now()}.txt`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    setTimeout(() => URL.revokeObjectURL(url), 1000);
+                    Toast.show('Palette exported!', 'success');
+                },
+
+                reset() {
+                    const { uploadPrompt, imagePreviewContainer, imagePreview, resultsSection, fileInput } = this.elements;
+                    uploadPrompt.classList.remove('hidden');
+                    imagePreviewContainer.classList.add('hidden');
+                    resultsSection.classList.add('hidden');
+                    if (this._previewObjectURL) {
+                        URL.revokeObjectURL(this._previewObjectURL);
+                        this._previewObjectURL = null;
+                    }
+                    imagePreview.src = '';
+                    fileInput.value = '';
+                    this.extractedColors = [];
+                    this.currentImage = null;
+                    this.isProcessing = false;
+                    this.currentFormat = 'hex';
+                    document.querySelectorAll('.format-tab').forEach(t => t.classList.remove('active'));
+                    const hexTab = document.querySelector('[data-format="hex"]');
+                    if (hexTab) hexTab.classList.add('active');
+                    // Free GPU memory
+                    const canvas = this.elements.canvas;
+                    if (canvas) { canvas.width = 0; canvas.height = 0; }
+                }
+            };
+
+            // ==========================================
+            // INITIALIZE
+            // ==========================================
+            document.addEventListener('DOMContentLoaded', () => {
+                ThemeManager.init();
+                UI.init();
+            });
+
+        })();
     </script>
 </body>
 

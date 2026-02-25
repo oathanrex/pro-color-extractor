@@ -1,0 +1,8 @@
+{
+  "name": "Pro Color Extractor",
+  "short_name": "ColorTool",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0a0c14",
+  "theme_color": "#4f46e5"
+}

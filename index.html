@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Color Extractor — Extract Color Palettes from Any Image | Oathan Rex</title>
+    <meta name="description"
+        content="Free online tool to extract dominant color palettes from any image. Get HEX, RGB, and HSL codes instantly. No signup required. By Oathan Rex.">
+    <meta name="keywords"
+        content="color extractor, color palette generator, image color picker, hex color from image, rgb extractor, design tool, free color tool">
+    <meta name="author" content="Oathan Rex">
+    <link rel="author" href="https://oathanrex.github.io">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://oathanrex.github.io/pro-color-extractor/">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pro Color Extractor — Extract Color Palettes Instantly">
+    <meta property="og:description"
+        content="Upload any image and extract its dominant colors in HEX, RGB, and HSL. Free, fast, no signup.">
+    <meta property="og:url" content="https://oathanrex.github.io/pro-color-extractor/">
+    <meta property="og:site_name" content="Pro Color Extractor by Oathan Rex">
+    <meta property="og:image" content="https://oathanrex.github.io/pro-color-extractor/og-image.png">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pro Color Extractor — Extract Color Palettes Instantly">
+    <meta name="twitter:description"
+        content="Upload any image. Get dominant colors in HEX, RGB, HSL. Free tool by Oathan Rex.">
+    <meta name="twitter:image" content="https://oathanrex.github.io/pro-color-extractor/og-image.png">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Pro Color Extractor",
+        "description": "Free online tool to extract dominant color palettes from any image. Get HEX, RGB, and HSL codes instantly.",
+        "url": "https://oathanrex.github.io/pro-color-extractor/",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Oathan Rex",
+            "url": "https://oathanrex.github.io"
+        }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='bgGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232b323b'/%3E%3Cstop offset='100%25' stop-color='%231e2329'/%3E%3C/linearGradient%3E%3ClinearGradient id='spectrum' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ff0055'/%3E%3Cstop offset='20%25' stop-color='%23ffcc00'/%3E%3Cstop offset='40%25' stop-color='%2300dd33'/%3E%3Cstop offset='60%25' stop-color='%230099ff'/%3E%3Cstop offset='80%25' stop-color='%236600ff'/%3E%3Cstop offset='100%25' stop-color='%23ff0055'/%3E%3C/linearGradient%3E%3ClinearGradient id='glassBody' x1='0%25' y1='50%25' x2='100%25' y2='50%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='0.1'/%3E%3Cstop offset='20%25' stop-color='%23ffffff' stop-opacity='0.05'/%3E%3Cstop offset='50%25' stop-color='%23ffffff' stop-opacity='0'/%3E%3Cstop offset='80%25' stop-color='%23ffffff' stop-opacity='0.05'/%3E%3Cstop offset='100%25' stop-color='%23ffffff' stop-opacity='0.2'/%3E%3C/linearGradient%3E%3ClinearGradient id='metal' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23555'/%3E%3Cstop offset='20%25' stop-color='%23999'/%3E%3Cstop offset='50%25' stop-color='%23eee'/%3E%3Cstop offset='80%25' stop-color='%23999'/%3E%3Cstop offset='100%25' stop-color='%23555'/%3E%3C/linearGradient%3E%3CradialGradient id='bulb' cx='30%25' cy='30%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%23556677'/%3E%3Cstop offset='100%25' stop-color='%231a2026'/%3E%3C/radialGradient%3E%3Cfilter id='dropShadow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur in='SourceAlpha' stdDeviation='8'/%3E%3CfeOffset dx='4' dy='8' result='offsetblur'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.4'/%3E%3C/feComponentTransfer%3E%3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3Cfilter id='glow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur stdDeviation='4' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Crect width='512' height='512' rx='64' fill='url(%23bgGrad)'/%3E%3Cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23ffffff' stroke-opacity='0.03' stroke-width='1'/%3E%3C/pattern%3E%3Crect width='512' height='512' rx='64' fill='url(%23grid)'/%3E%3Cg transform='translate(140, 372)'%3E%3Ccircle r='40' fill='none' stroke='url(%23spectrum)' stroke-width='4' stroke-dasharray='10, 5' opacity='0.6'/%3E%3Cline x1='-50' y1='0' x2='-20' y2='0' stroke='%23fff' stroke-opacity='0.3' stroke-width='2'/%3E%3Cline x1='20' y1='0' x2='50' y2='0' stroke='%23fff' stroke-opacity='0.3' stroke-width='2'/%3E%3Cline x1='0' y1='-50' x2='0' y2='-20' stroke='%23fff' stroke-opacity='0.3' stroke-width='2'/%3E%3Cline x1='0' y1='20' x2='0' y2='50' stroke='%23fff' stroke-opacity='0.3' stroke-width='2'/%3E%3C/g%3E%3Cg transform='translate(256, 256) rotate(-45)' filter='url(%23dropShadow)'%3E%3Cpath d='M -25 -60 L -25 80 L -5 130 L 5 130 L 25 80 L 25 -60 Z' fill='url(%23glassBody)' stroke='%23ffffff' stroke-opacity='0.2' stroke-width='1'/%3E%3Cpath d='M -20 -60 L -20 75 L -4 120 L 4 120 L 20 75 L 20 -60 Z' fill='url(%23spectrum)' opacity='0.9'/%3E%3Cpath d='M -12 -60 L -12 70 L -2 110' fill='none' stroke='%23ffffff' stroke-width='4' stroke-opacity='0.3' stroke-linecap='round'/%3E%3Crect x='-30' y='-90' width='60' height='30' rx='4' fill='url(%23metal)'/%3E%3Crect x='-30' y='-85' width='60' height='2' fill='%23000' opacity='0.1'/%3E%3Crect x='-30' y='-65' width='60' height='2' fill='%23000' opacity='0.1'/%3E%3Cpath d='M -30 -90 C -30 -110, -45 -130, -45 -150 C -45 -190, -20 -210, 0 -210 C 20 -210, 45 -190, 45 -150 C 45 -130, 30 -110, 30 -90 Z' fill='url(%23bulb)'/%3E%3Cellipse cx='-15' cy='-170' rx='10' ry='20' fill='%23ffffff' opacity='0.1' transform='rotate(-10)'/%3E%3C/g%3E%3Cg transform='translate(140, 372)' filter='url(%23glow)'%3E%3Cpath d='M 0 -15 C -8 0, -12 8, -12 15 A 12 12 0 0 0 12 15 C 12 8, 8 0, 0 -15 Z' fill='url(%23spectrum)'/%3E%3Cpath d='M -4 10 A 4 4 0 0 1 0 6' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+
+    <!-- Fonts preconnect and preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Critical Inline CSS -->
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+
+    <!-- Tailwind CSS -->
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f4ff',
+                            100: '#dbe4ff',
+                            200: '#bac8ff',
+                            300: '#91a7ff',
+                            400: '#748ffc',
+                            500: '#5c7cfa',
+                            600: '#4c6ef5',
+                            700: '#4263eb',
+                            800: '#3b5bdb',
+                            900: '#364fc7'
+                        },
+                        surface: {
+                            light: '#ffffff',
+                            dark: '#0f111a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4c6ef5;
+            border-radius: 3px;
+        }
+
+        /* Drop zone animations */
+        .drop-zone {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .drop-zone.drag-over {
+            transform: scale(1.02);
+            border-color: #4c6ef5 !important;
+            background: rgba(76, 110, 245, 0.08) !important;
+        }
+
+        /* Color swatch hover */
+        .color-swatch {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Toast notification */
+        .toast {
+            animation: toastIn 0.3s ease, toastOut 0.3s ease 1.7s forwards;
+        }
+
+        @keyframes toastIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes toastOut {
+            from {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(-10px) scale(0.95);
+            }
+        }
+
+        /* Pulse animation for upload icon */
+        .pulse-ring {
+            animation: pulseRing 2s ease-out infinite;
+        }
+
+        @keyframes pulseRing {
+            0% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #4c6ef5 0%, #7c3aed 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Skeleton loading */
+        .skeleton {
+            background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        .dark .skeleton {
+            background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+            background-size: 200% 100%;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        /* Floating particles background */
+        .bg-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(76, 110, 245, 0.08) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .dark .bg-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(76, 110, 245, 0.15) 1px, transparent 0);
+        }
+
+        /* Social link hover */
+        .social-link {
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Format tabs */
+        .format-tab {
+            transition: all 0.2s ease;
+        }
+
+        .format-tab.active {
+            background: #4c6ef5;
+            color: white;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            transition: width 0.5s ease;
+        }
+
+        /* Image preview */
+        .image-preview {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Nav blur */
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        /* === HYBRID ADDITIONS: Glassmorphism + Animations === */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        @keyframes gradient-shift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(-45deg, #4c6ef5, #7c3aed, #ec4899, #4c6ef5);
+            background-size: 400% 400%;
+            animation: gradient-shift 8s ease infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(76, 110, 245, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(76, 110, 245, 0.6);
+            }
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-[#0a0c14] text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+    <!-- Hidden Canvas -->
+    <canvas id="hiddenCanvas" class="hidden"></canvas>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="fixed bottom-6 right-6 z-[100] flex flex-col gap-2"></div>
+
+    <!-- NAVIGATION -->
+    <nav
+        class="sticky top-0 z-50 nav-blur bg-white/80 dark:bg-[#0f111a]/80 border-b border-gray-200/50 dark:border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group" aria-label="Pro Color Extractor Home">
+                    <div
+                        class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center shadow-lg shadow-brand-500/25">
+                        <svg class="w-7 h-7" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="spectrum" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ff0055" />
+                                    <stop offset="20%" stop-color="#ffcc00" />
+                                    <stop offset="40%" stop-color="#00dd33" />
+                                    <stop offset="60%" stop-color="#0099ff" />
+                                    <stop offset="80%" stop-color="#6600ff" />
+                                    <stop offset="100%" stop-color="#ff0055" />
+                                </linearGradient>
+                                <linearGradient id="glassBody" x1="0%" y1="50%" x2="100%" y2="50%">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1" />
+                                    <stop offset="20%" stop-color="#ffffff" stop-opacity="0.05" />
+                                    <stop offset="50%" stop-color="#ffffff" stop-opacity="0" />
+                                    <stop offset="80%" stop-color="#ffffff" stop-opacity="0.05" />
+                                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.2" />
+                                </linearGradient>
+                                <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#555" />
+                                    <stop offset="20%" stop-color="#999" />
+                                    <stop offset="50%" stop-color="#eee" />
+                                    <stop offset="80%" stop-color="#999" />
+                                    <stop offset="100%" stop-color="#555" />
+                                </linearGradient>
+                                <radialGradient id="bulb" cx="30%" cy="30%" r="70%">
+                                    <stop offset="0%" stop-color="#556677" />
+                                    <stop offset="100%" stop-color="#1a2026" />
+                                </radialGradient>
+                            </defs>
+                            <g transform="translate(140, 372)">
+                                <circle r="40" fill="none" stroke="currentColor" stroke-width="4"
+                                    stroke-dasharray="10, 5" opacity="0.6" />
+                                <line x1="-50" y1="0" x2="-20" y2="0" stroke="#fff" stroke-opacity="0.3"
+                                    stroke-width="2" />
+                                <line x1="20" y1="0" x2="50" y2="0" stroke="#fff" stroke-opacity="0.3"
+                                    stroke-width="2" />
+                                <line x1="0" y1="-50" x2="0" y2="-20" stroke="#fff" stroke-opacity="0.3"
+                                    stroke-width="2" />
+                                <line x1="0" y1="20" x2="0" y2="50" stroke="#fff" stroke-opacity="0.3"
+                                    stroke-width="2" />
+                            </g>
+                            <g transform="translate(256, 256) rotate(-45)">
+                                <path d="M -25 -60 L -25 80 L -5 130 L 5 130 L 25 80 L 25 -60 Z" fill="url(#glassBody)"
+                                    stroke="#ffffff" stroke-opacity="0.2" stroke-width="1" />
+                                <path d="M -20 -60 L -20 75 L -4 120 L 4 120 L 20 75 L 20 -60 Z" fill="currentColor"
+                                    opacity="0.9" />
+                                <path d="M -12 -60 L -12 70 L -2 110" fill="none" stroke="#ffffff" stroke-width="4"
+                                    stroke-opacity="0.3" stroke-linecap="round" />
+                                <rect x="-30" y="-90" width="60" height="30" rx="4" fill="url(#metal)" />
+                                <rect x="-30" y="-85" width="60" height="2" fill="#000" opacity="0.1" />
+                                <rect x="-30" y="-65" width="60" height="2" fill="#000" opacity="0.1" />
+                                <path
+                                    d="M -30 -90 C -30 -110, -45 -130, -45 -150 C -45 -190, -20 -210, 0 -210 C 20 -210, 45 -190, 45 -150 C 45 -130, 30 -110, 30 -90 Z"
+                                    fill="url(#bulb)" />
+                                <ellipse cx="-15" cy="-170" rx="10" ry="20" fill="#ffffff" opacity="0.1"
+                                    transform="rotate(-10)" />
+                            </g>
+                            <g transform="translate(140, 372)">
+                                <path d="M 0 -15 C -8 0, -12 8, -12 15 A 12 12 0 0 0 12 15 C 12 8, 8 0, 0 -15 Z"
+                                    fill="currentColor" />
+                                <path d="M -4 10 A 4 4 0 0 1 0 6" stroke="#ffffff" stroke-width="2"
+                                    stroke-linecap="round" fill="none" opacity="0.6" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold tracking-tight">Pro Color<span
+                                class="text-brand-600 dark:text-brand-400"> Extractor</span></span>
+                    </div>
+                </a>
+
+                <!-- Right Side -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <a href="#faq"
+                        class="hidden md:block text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50">FAQ</a>
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/oathanrex" target="_blank" rel="noopener me"
+                        class="hidden sm:flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50"
+                        aria-label="Oathan Rex Portfolio">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Portfolio
+                    </a>
+
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" type="button"
+                        class="relative w-14 h-8 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                        aria-label="Toggle dark mode" aria-pressed="false">
+                        <div id="themeToggleKnob"
+                            class="absolute top-1 left-1 w-6 h-6 rounded-full bg-white shadow-md transform transition-transform duration-300 flex items-center justify-center">
+                            <svg id="sunIcon" class="w-3.5 h-3.5 text-amber-500" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <svg id="moonIcon" class="w-3.5 h-3.5 text-brand-400 hidden" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 bg-grid">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-8 sm:pb-12 text-center">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 dark:bg-brand-900/20 border border-brand-200 dark:border-brand-800/30 text-brand-700 dark:text-brand-300 text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Free &bull; No Signup &bull; 100% Client-Side
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-5">
+                    Extract Beautiful Colors
+                    <br>
+                    <span class="gradient-text">From Any Image</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10">
+                    Upload any image and instantly get its dominant color palette in HEX, RGB, and HSL formats. Copy
+                    with one click.
+                </p>
+
+                <!-- UPLOAD ZONE -->
+                <div id="dropZone"
+                    class="drop-zone relative max-w-2xl mx-auto border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-2xl p-8 sm:p-12 cursor-pointer bg-white dark:bg-gray-900/50 hover:border-brand-400 dark:hover:border-brand-500 group"
+                    role="button" tabindex="0" aria-label="Upload an image to extract colors">
+
+                    <!-- Default State -->
+                    <div id="uploadPrompt" class="flex flex-col items-center gap-4">
+                        <div class="relative">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-brand-900/50 transition-colors">
+                                <svg class="w-8 h-8 text-brand-500" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+                                </svg>
+                            </div>
+                            <div class="absolute inset-0 w-16 h-16 rounded-2xl border-2 border-brand-400/30 pulse-ring">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-base font-semibold text-gray-700 dark:text-gray-200 mb-1">
+                                Drop image here or <span
+                                    class="text-brand-600 dark:text-brand-400 underline underline-offset-2">browse</span>
+                            </p>
+                            <p class="text-sm text-gray-400 dark:text-gray-500">PNG, JPG, WEBP, SVG — Max 10MB</p>
+                        </div>
+                    </div>
+
+                    <!-- Image Preview State (hidden by default) -->
+                    <div id="imagePreviewContainer" class="hidden image-preview">
+                        <div class="relative inline-block">
+                            <img id="imagePreview" src="" alt="Selected image"
+                                class="max-h-64 rounded-xl shadow-lg mx-auto" fetchpriority="high">
+                            <button id="removeImage" type="button"
+                                class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center shadow-lg transition-colors"
+                                aria-label="Remove image">
+                                <svg class="w-4 h-4" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M18 6 6 18" />
+                                    <path d="m6 6 12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p id="imageName" class="text-sm text-gray-500 dark:text-gray-400 mt-3 font-mono"></p>
+                    </div>
+
+                    <input id="fileInput" type="file" accept="image/*" class="hidden" aria-hidden="true">
+                </div>
+
+                <!-- URL Input -->
+                <div class="mt-4 flex gap-2 max-w-2xl mx-auto" id="urlInputRow">
+                    <input id="urlInput" type="url" placeholder="Or paste an image URL (https://...)"
+                        class="flex-1 px-4 py-2.5 rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    <button id="loadUrlBtn" type="button"
+                        class="px-4 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-xl transition-colors whitespace-nowrap">
+                        Load URL
+                    </button>
+                </div>
+
+                <!-- Processing Indicator -->
+                <div id="processingBar" class="hidden max-w-2xl mx-auto mt-4">
+                    <div class="h-1 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+                        <div class="progress-bar h-full bg-gradient-to-r from-brand-500 to-purple-500 rounded-full"
+                            style="width: 0%"></div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-2">Analyzing colors...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PALETTE RESULTS -->
+        <section id="resultsSection" class="hidden pb-16 sm:pb-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                            Extracted Palette
+                        </h2>
+                        <p class="text-gray-500 dark:text-gray-400 mt-1" id="colorCount">8 dominant colors found</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <!-- Palette Size Selector -->
+                        <div class="flex items-center gap-2">
+                            <label for="paletteSizeSelect"
+                                class="text-xs font-semibold text-gray-500 dark:text-gray-400 whitespace-nowrap">Colors:</label>
+                            <select id="paletteSizeSelect"
+                                class="text-sm font-semibold bg-gray-100 dark:bg-gray-800 border-0 rounded-xl px-3 py-2 text-gray-700 dark:text-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-500">
+                                <option value="4">4</option>
+                                <option value="8" selected>8</option>
+                                <option value="12">12</option>
+                                <option value="16">16</option>
+                            </select>
+                        </div>
+
+                        <!-- Format Selector -->
+                        <div class="flex bg-gray-100 dark:bg-gray-800 rounded-xl p-1" role="radiogroup"
+                            aria-label="Color format">
+                            <button class="format-tab active px-4 py-2 text-sm font-semibold rounded-lg"
+                                data-format="hex" role="radio" aria-checked="true">HEX</button>
+                            <button
+                                class="format-tab px-4 py-2 text-sm font-semibold rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+                                data-format="rgb" role="radio" aria-checked="false">RGB</button>
+                            <button
+                                class="format-tab px-4 py-2 text-sm font-semibold rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+                                data-format="hsl" role="radio" aria-checked="false">HSL</button>
+                        </div>
+                        <!-- Export All -->
+                        <button id="exportAllBtn" type="button"
+                            class="flex items-center gap-2 px-4 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-xl shadow-lg shadow-brand-500/25 transition-all hover:shadow-brand-500/40"
+                            aria-label="Export all colors">
+                            <svg class="w-4 h-4" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" x2="12" y1="15" y2="3" />
+                            </svg>
+                            Export
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Color Grid -->
+                <div id="colorGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-5">
+                    <!-- Dynamically populated -->
+                </div>
+
+                <!-- Full Palette Bar -->
+                <div id="paletteBar" class="mt-10 h-16 sm:h-20 rounded-2xl overflow-hidden flex shadow-xl"></div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="py-16 sm:py-24 border-t border-gray-200/50 dark:border-gray-800/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12 tracking-tight">How It Works</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-blue-500" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="17 8 12 3 7 8" />
+                                <line x1="12" x2="12" y1="3" y2="15" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">1. Upload Image</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Drag & drop or click to
+                            upload any image file from your device.</p>
+                    </div>
+                    <div class="text-center group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-purple-500" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z" />
+                                <path d="m14 7 3 3" />
+                                <path d="M5 6v4" />
+                                <path d="M19 14v4" />
+                                <path d="M10 2v2" />
+                                <path d="M7 8H3" />
+                                <path d="M21 16h-4" />
+                                <path d="M11 3H9" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">2. AI Extracts</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Our algorithm analyzes every
+                            pixel using Median Cut quantization.</p>
+                    </div>
+                    <div class="text-center group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-pink-50 dark:bg-pink-900/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-pink-500" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">3. Copy & Use</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Click any swatch to copy its
+                            color code. Export entire palette in one click.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION (Hybrid: from File B) -->
+        <section id="faq" class="py-16 sm:py-20 border-t border-gray-200/50 dark:border-gray-800/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12 tracking-tight">
+                    Frequently Asked <span class="text-brand-600 dark:text-brand-400">Questions</span>
+                </h2>
+                <div class="space-y-3">
+                    <details
+                        class="bg-white dark:bg-gray-900/50 rounded-2xl border border-gray-200 dark:border-gray-800 group">
+                        <summary
+                            class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
+                            Is this tool really free?
+                            <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Yes! 100% free,
+                            forever. No signup, no usage limits, no watermarks on exports.</div>
+                    </details>
+                    <details
+                        class="bg-white dark:bg-gray-900/50 rounded-2xl border border-gray-200 dark:border-gray-800 group">
+                        <summary
+                            class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
+                            Are my images uploaded to a server?
+                            <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Never. All
+                            processing runs in your browser via Canvas API. Your images never leave your device —
+                            complete privacy guaranteed.</div>
+                    </details>
+                    <details
+                        class="bg-white dark:bg-gray-900/50 rounded-2xl border border-gray-200 dark:border-gray-800 group">
+                        <summary
+                            class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
+                            What image formats are supported?
+                            <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">PNG, JPG, JPEG,
+                            WEBP, GIF, BMP, and SVG — all common formats. Max 10MB per image.</div>
+                    </details>
+                    <details
+                        class="bg-white dark:bg-gray-900/50 rounded-2xl border border-gray-200 dark:border-gray-800 group">
+                        <summary
+                            class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
+                            How does the color extraction work?
+                            <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">We use a
+                            Modified Median Cut algorithm to analyze every pixel, identify dominant color groups, then
+                            filter duplicates using Euclidean distance — giving you the cleanest possible palette.</div>
+                    </details>
+                    <details
+                        class="bg-white dark:bg-gray-900/50 rounded-2xl border border-gray-200 dark:border-gray-800 group">
+                        <summary
+                            class="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 dark:text-gray-100">
+                            Can I use extracted colors commercially?
+                            <svg class="w-5 h-5 text-brand-500 transform group-open:rotate-180 transition-transform duration-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Absolutely.
+                            Colors are not copyrightable. Use any extracted palette freely in personal or commercial
+                            projects.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-200/50 dark:border-gray-800/50 bg-white/50 dark:bg-[#0a0c14]/50 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+                <!-- Left -->
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485" />
+                        </svg>
+                    </div>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">
+                        © 2026 <span class="font-semibold text-gray-700 dark:text-gray-200">Oathan Rex</span>. All
+                        rights reserved.
+                    </span>
+                </div>
+
+                <!-- Social -->
+                <div class="flex items-center gap-1">
+
+                    <!-- Blogger -->
+                    <a href="https://oathanrex.blogspot.com" target="_blank" rel="noopener me"
+                        class="social-link p-2.5 rounded-xl text-gray-400 hover:text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-all">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" role="img"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Blogger icon</title>
+                            <path fill="#ffffff"
+                                d="M21.976 24H2.026C.9 24 0 23.1 0 21.976V2.026C0 .9.9 0 2.025 0H22.05C23.1 0 24 .9 24 2.025v19.95C24 23.1 23.1 24 21.976 24zM12 3.975H9c-2.775 0-5.025 2.25-5.025 5.025v6c0 2.774 2.25 5.024 5.025 5.024h6c2.774 0 5.024-2.25 5.024-5.024v-3.975c0-.6-.45-1.05-1.05-1.05H18c-.524 0-.976-.45-.976-.976 0-2.776-2.25-5.026-5.024-5.026zm3.074 12H9c-.525 0-.975-.45-.975-.975s.45-.976.975-.976h6.074c.526 0 .977.45.977.976s-.45.976-.975.976zm-2.55-7.95c.527 0 .976.45.976.975s-.45.975-.975.975h-3.6c-.525 0-.976-.45-.976-.975s.45-.975.975-.975h3.6z" />
+                        </svg>
+                    </a>
+
+                    <!-- Buy Me A Coffee -->
+                    <a href="https://www.buymeacoffee.com/oathanrex" target="_blank" rel="noopener me"
+                        class="social-link p-2.5 rounded-xl text-gray-400 hover:text-yellow-500 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                            <line x1="6" y1="1" x2="6" y2="4" />
+                            <line x1="10" y1="1" x2="10" y2="4" />
+                            <line x1="14" y1="1" x2="14" y2="4" />
+                        </svg>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://oathanrex.github.io" target="_blank" rel="noopener me"
+                        class="social-link p-2.5 rounded-xl text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all">
+
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.93 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.52 11.52 0 0112 6.844c1.02.005 2.047.138 3.006.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.874.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.61-2.807 5.624-5.48 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z" />
+                        </svg>
+
+                    </a>
+
+                    <!-- CodePen -->
+                    <a href="https://codepen.io/oathanrex" target="_blank" rel="noopener me"
+                        class="social-link p-2.5 rounded-xl text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+                            <line x1="12" y1="22" x2="12" y2="15.5" />
+                            <polyline points="22 8.5 12 15.5 2 8.5" />
+                            <polyline points="2 15.5 12 8.5 22 15.5" />
+                            <line x1="12" y1="2" x2="12" y2="8.5" />
+                        </svg>
+
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://youtube.com/@oathanrex" target="_blank" rel="noopener me"
+                        class="social-link p-2.5 rounded-xl text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23.498 6.186C23 4.5 21.6 4 12 4S1 4.5.502 6.186 0 12 0 12s0 3.93.502 5.814C1 19.5 2.4 20 12 20s11-.5 11.498-2.186S24 12 24 12zM9.5 15.5v-7l6 3.5-6 3.5z" />
+                        </svg>
+                    </a>
+
+                </div>
+
+                <!-- Right -->
+                <p class="text-xs text-gray-400 dark:text-gray-500">
+                    Built with precision. Zero APIs. 100% client-side.
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT ENGINE -->
+    <!-- ============================================ -->
+    <script>
+            (function () {
+                'use strict';
+
+                // ==========================================
+                // THEME MANAGEMENT
+                // ==========================================
+                const ThemeManager = {
+                    // DOM refs cached at init — avoids repeated getElementById on every toggle
+                    _knob: null, _sun: null, _moon: null,
+                    init() {
+                        this._knob = document.getElementById('themeToggleKnob');
+                        this._sun = document.getElementById('sunIcon');
+                        this._moon = document.getElementById('moonIcon');
+
+                        const saved = localStorage.getItem('theme');
+                        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                        const isDark = saved === 'dark' || (!saved && prefersDark);
+                        this.apply(isDark);
+
+                        document.getElementById('themeToggle').addEventListener('click', () => {
+                            const nowDark = document.documentElement.classList.toggle('dark');
+                            localStorage.setItem('theme', nowDark ? 'dark' : 'light');
+                            this.updateToggleUI(nowDark);
+                        });
+
+                        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                            if (!localStorage.getItem('theme')) this.apply(e.matches);
+                        });
+                    },
+                    apply(isDark) {
+                        document.documentElement.classList.toggle('dark', isDark);
+                        this.updateToggleUI(isDark);
+                    },
+                    updateToggleUI(isDark) {
+                        if (!this._knob) return;
+                        this._knob.style.transform = isDark ? 'translateX(24px)' : 'translateX(0)';
+                        this._sun.classList.toggle('hidden', isDark);
+                        this._moon.classList.toggle('hidden', !isDark);
+                        const btn = document.getElementById('themeToggle');
+                        if (btn) btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+                    }
+                };
+
+                // ==========================================
+                // TOAST NOTIFICATIONS
+                // ==========================================
+                const Toast = {
+                    show(message, type = 'success') {
+                        const container = document.getElementById('toastContainer');
+                        const colors = {
+                            success: 'bg-green-500',
+                            error: 'bg-red-500',
+                            info: 'bg-brand-500'
+                        };
+                        const icons = {
+                            success: `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>`,
+                            error: `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>`,
+                            info: `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
+                        };
+
+                        const toast = document.createElement('div');
+                        toast.className = `toast flex items-center gap-3 px-4 py-3 rounded-xl ${colors[type] || colors.info} text-white text-sm font-medium shadow-2xl`;
+                        if (icons[type]) {
+                            const iconFrag = document.createRange().createContextualFragment(icons[type]);
+                            toast.appendChild(iconFrag);
+                        }
+                        const msgSpan = document.createElement('span');
+                        msgSpan.textContent = String(message);
+                        toast.appendChild(msgSpan);
+                        container.appendChild(toast);
+                        setTimeout(() => toast.remove(), 2200);
+                    }
+                };
+
+                // ==========================================
+                // COLOR EXTRACTION ENGINE (Median Cut)
+                // ==========================================
+                const ColorEngine = {
+                    extract(imageData, numColors = 8) {
+                        const pixels = [];
+                        const data = imageData.data;
+                        const step = Math.max(1, Math.floor(data.length / 4 / 10000));
+
+                        for (let i = 0; i < data.length; i += 4 * step) {
+                            const r = data[i], g = data[i + 1], b = data[i + 2], a = data[i + 3];
+                            if (a < 128) continue;
+                            if (r < 8 && g < 8 && b < 8) continue;
+                            if (r > 247 && g > 247 && b > 247) continue;
+                            pixels.push([r, g, b]);
+                        }
+
+                        if (pixels.length === 0) return [];
+
+                        const safeNum = Math.max(1, Math.min(numColors, 32));
+                        const depth = Math.ceil(Math.log2(Math.max(safeNum, 2)));
+                        const buckets = this.medianCut(pixels, depth);
+                        const colors = buckets
+                            .filter(bucket => bucket.length > 0)
+                            .map(bucket => this.averageColor(bucket))
+                            .slice(0, safeNum);
+
+                        // Deduplicate: remove colors too close to an already-kept color
+                        const DEDUP_THRESHOLD = 22;
+                        const unique = [];
+                        for (const c of colors) {
+                            const isDup = unique.some(u => {
+                                const dr = c[0] - u[0], dg = c[1] - u[1], db = c[2] - u[2];
+                                return Math.sqrt(dr * dr + dg * dg + db * db) < DEDUP_THRESHOLD;
+                            });
+                            if (!isDup) unique.push(c);
+                        }
+
+                        // Sort by perceptual luminance (dark to light)
+                        unique.sort((a, b) => {
+                            const lumA = 0.299 * a[0] + 0.587 * a[1] + 0.114 * a[2];
+                            const lumB = 0.299 * b[0] + 0.587 * b[1] + 0.114 * b[2];
+                            return lumA - lumB;
+                        });
+
+                        // Pre-compute all representations once
+                        return unique.map(([r, g, b]) => ({
+                            r, g, b,
+                            hex: this.rgbToHex(r, g, b).toUpperCase(),
+                            rgb: `rgb(${r}, ${g}, ${b})`,
+                            hsl: this.rgbToHsl(r, g, b),
+                            contrast: this.wcagContrast(r, g, b),
+                            contrastLabel: this.getContrastColor(r, g, b)
+                        }));
+                    },
+
+                    medianCut(pixels, depth) {
+                        if (depth <= 0 || pixels.length === 0) return [pixels];
+                        if (pixels.length <= 1) return [pixels];
+
+                        const ranges = [0, 1, 2].map(ch => {
+                            let min = 255, max = 0;
+                            for (let j = 0; j < pixels.length; j++) {
+                                const v = pixels[j][ch];
+                                if (v < min) min = v;
+                                if (v > max) max = v;
+                            }
+                            return max - min;
+                        });
+
+                        const maxChannel = ranges.indexOf(Math.max(...ranges));
+                        const sortedPixels = [...pixels].sort((a, b) => a[maxChannel] - b[maxChannel]);
+
+                        const mid = Math.floor(sortedPixels.length / 2);
+                        const left = sortedPixels.slice(0, mid);
+                        const right = sortedPixels.slice(mid);
+
+                        return [
+                            ...this.medianCut(left, depth - 1),
+                            ...this.medianCut(right, depth - 1)
+                        ];
+                    },
+
+                    averageColor(pixels) {
+                        if (pixels.length === 0) return [0, 0, 0];
+                        let r = 0, g = 0, b = 0;
+                        for (let i = 0; i < pixels.length; i++) {
+                            r += pixels[i][0]; g += pixels[i][1]; b += pixels[i][2];
+                        }
+                        const n = pixels.length;
+                        return [Math.round(r / n), Math.round(g / n), Math.round(b / n)];
+                    },
+
+                    rgbToHex(r, g, b) {
+                        return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+                    },
+
+                    rgbToHsl(r, g, b) {
+                        r /= 255; g /= 255; b /= 255;
+                        const max = Math.max(r, g, b), min = Math.min(r, g, b);
+                        let h, s, l = (max + min) / 2;
+
+                        if (max === min) {
+                            h = s = 0;
+                        } else {
+                            const d = max - min;
+                            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                            switch (max) {
+                                case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+                                case g: h = ((b - r) / d + 2) / 6; break;
+                                case b: h = ((r - g) / d + 4) / 6; break;
+                            }
+                        }
+
+                        return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
+                    },
+
+                    getContrastColor(r, g, b) {
+                        const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+                        return lum > 0.5 ? '#1a1a2e' : '#ffffff';
+                    },
+
+                    wcagContrast(r, g, b) {
+                        // Returns contrast ratio against white and black per WCAG 2.1
+                        const toLinear = c => { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+                        const L = 0.2126 * toLinear(r) + 0.7152 * toLinear(g) + 0.0722 * toLinear(b);
+                        const contrastWhite = (1.05) / (L + 0.05);
+                        const contrastBlack = (L + 0.05) / (0.05);
+                        return { white: +contrastWhite.toFixed(1), black: +contrastBlack.toFixed(1) };
+                    },
+
+                    formatColor(c, format) {
+                        // Accept both rich {r,g,b,hex,rgb,hsl} objects and legacy [r,g,b] arrays
+                        if (Array.isArray(c)) {
+                            const [r, g, b] = c;
+                            switch (format) {
+                                case 'hex': return this.rgbToHex(r, g, b).toUpperCase();
+                                case 'rgb': return `rgb(${r}, ${g}, ${b})`;
+                                case 'hsl': return this.rgbToHsl(r, g, b);
+                                default: return this.rgbToHex(r, g, b).toUpperCase();
+                            }
+                        }
+                        switch (format) {
+                            case 'hex': return c.hex;
+                            case 'rgb': return c.rgb;
+                            case 'hsl': return c.hsl;
+                            default: return c.hex;
+                        }
+                    }
+                };
+
+                // ==========================================
+                // UI CONTROLLER
+                // ==========================================
+                const UI = {
+                    currentFormat: 'hex',
+                    extractedColors: [],
+                    currentImage: null,
+                    isProcessing: false,
+                    _previewObjectURL: null,
+                    elements: {},
+
+                    init() {
+                        this.cacheElements();
+                        this.bindEvents();
+                    },
+
+                    cacheElements() {
+                        this.elements = {
+                            dropZone: document.getElementById('dropZone'),
+                            fileInput: document.getElementById('fileInput'),
+                            uploadPrompt: document.getElementById('uploadPrompt'),
+                            imagePreviewContainer: document.getElementById('imagePreviewContainer'),
+                            imagePreview: document.getElementById('imagePreview'),
+                            imageName: document.getElementById('imageName'),
+                            removeImage: document.getElementById('removeImage'),
+                            processingBar: document.getElementById('processingBar'),
+                            resultsSection: document.getElementById('resultsSection'),
+                            colorGrid: document.getElementById('colorGrid'),
+                            paletteBar: document.getElementById('paletteBar'),
+                            colorCount: document.getElementById('colorCount'),
+                            exportAllBtn: document.getElementById('exportAllBtn'),
+                            canvas: document.getElementById('hiddenCanvas')
+                        };
+                    },
+
+                    bindEvents() {
+                        const { dropZone, fileInput, removeImage, exportAllBtn } = this.elements;
+
+                        // File input — skip if image already loaded (avoid re-opening picker on preview click)
+                        dropZone.addEventListener('click', () => {
+                            if (this.currentImage) return;
+                            fileInput.click();
+                        });
+                        dropZone.addEventListener('keydown', (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
+                        });
+                        fileInput.addEventListener('change', (e) => this.handleFile(e.target.files[0]));
+
+                        // Drag & Drop — consolidated to single listener per event
+                        dropZone.addEventListener('dragenter', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+                        dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+                        dropZone.addEventListener('dragleave', e => { e.preventDefault(); dropZone.classList.remove('drag-over'); });
+                        dropZone.addEventListener('drop', e => {
+                            e.preventDefault();
+                            dropZone.classList.remove('drag-over');
+                            const file = e.dataTransfer?.files[0];
+                            if (file && file.type.startsWith('image/')) this.handleFile(file);
+                            else Toast.show('Please drop a valid image file.', 'error');
+                        });
+
+                        // Remove image
+                        removeImage.addEventListener('click', (e) => { e.stopPropagation(); this.reset(); });
+
+                        // Format tabs
+                        document.querySelectorAll('.format-tab').forEach(tab => {
+                            tab.addEventListener('click', () => {
+                                this.currentFormat = tab.dataset.format;
+                                document.querySelectorAll('.format-tab').forEach(t => {
+                                    t.classList.remove('active');
+                                    t.setAttribute('aria-checked', 'false');
+                                });
+                                tab.classList.add('active');
+                                tab.setAttribute('aria-checked', 'true');
+                                this.renderColors();
+                            });
+                        });
+
+                        // Palette size selector — re-extract on change
+                        const paletteSel = document.getElementById('paletteSizeSelect');
+                        if (paletteSel) paletteSel.addEventListener('change', () => { if (this.currentImage) this.processImage(this.currentImage); });
+
+                        // Export
+                        exportAllBtn.addEventListener('click', () => this.exportPalette());
+
+                        // URL load
+                        const urlBtn = document.getElementById('loadUrlBtn');
+                        const urlIn = document.getElementById('urlInput');
+                        if (urlBtn && urlIn) {
+                            const doLoad = () => {
+                                const u = urlIn.value.trim();
+                                if (!u) return;
+                                if (!/^https?:\/\/.+/i.test(u)) { Toast.show('Enter a valid https:// URL', 'error'); return; }
+                                this.loadFromUrl(u);
+                            };
+                            urlBtn.addEventListener('click', doLoad);
+                            urlIn.addEventListener('keydown', e => { if (e.key === 'Enter') doLoad(); });
+                        }
+
+                        // Paste from clipboard
+                        let pasteTimeout = null;
+                        document.addEventListener('paste', (e) => {
+                            const items = e.clipboardData?.items;
+                            if (!items) return;
+                            if (pasteTimeout) return;
+
+                            pasteTimeout = setTimeout(() => { pasteTimeout = null; }, 500);
+                            for (const item of items) {
+                                if (item.type.startsWith('image/')) {
+                                    const file = item.getAsFile();
+                                    if (file) { this.handleFile(file); break; }
+                                }
+                            }
+                        });
+                    },
+
+                    loadFromUrl(url) {
+                        if (this.isProcessing) { Toast.show('Processing in progress...', 'info'); return; }
+                        Toast.show('Loading image...', 'info');
+                        const displayName = url.split('/').pop().split('?')[0] || 'url-image';
+                        const tryLoad = (withCors) => {
+                            const img = new Image();
+                            if (withCors) img.crossOrigin = 'anonymous';
+                            img.onload = () => {
+                                this.currentImage = img;
+                                this.showPreview(url, displayName);
+                                this.processImage(img);
+                                const urlInput = document.getElementById('urlInput');
+                                if (urlInput) urlInput.value = '';
+                            };
+                            img.onerror = () => {
+                                if (!withCors) {
+                                    // First pass failed without CORS — retry with crossOrigin=anonymous
+                                    tryLoad(true);
+                                } else {
+                                    this.isProcessing = false;
+                                    Toast.show('Failed to load URL — image may be unavailable or CORS-blocked.', 'error');
+                                }
+                            };
+                            img.src = url;
+                        };
+                        tryLoad(false);
+                    },
+
+                    handleFile(file) {
+                        if (!file) return;
+                        if (this.isProcessing) { Toast.show('Processing in progress, please wait...', 'info'); return; }
+                        if (!file.type.startsWith('image/')) {
+                            Toast.show('Invalid file type. Please upload an image.', 'error');
+                            return;
+                        }
+                        if (file.size > 10 * 1024 * 1024) {
+                            Toast.show('File too large. Max 10MB allowed.', 'error');
+                            return;
+                        }
+
+                        // Use object URL (no base64 33% overhead vs DataURL)
+                        const objectURL = URL.createObjectURL(file);
+                        const img = new Image();
+                        img.onload = () => {
+                            this.currentImage = img;
+                            this._previewObjectURL = objectURL; // track for cleanup in reset()
+                            this.showPreview(objectURL, file.name);
+                            this.processImage(img);
+                        };
+                        img.onerror = () => {
+                            URL.revokeObjectURL(objectURL);
+                            this.isProcessing = false;
+                            this.reset();
+                            Toast.show('Failed to load image — file may be corrupt or unsupported.', 'error');
+                        };
+                        img.src = objectURL;
+                    },
+
+                    showPreview(src, name) {
+                        const { uploadPrompt, imagePreviewContainer, imagePreview, imageName } = this.elements;
+                        uploadPrompt.classList.add('hidden');
+                        imagePreviewContainer.classList.remove('hidden');
+                        imagePreview.src = src;
+                        imageName.textContent = name.length > 30 ? name.substring(0, 27) + '...' : name;
+                    },
+
+                    processImage(img) {
+                        this.isProcessing = true;
+                        const { canvas, processingBar } = this.elements;
+                        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+
+                        // Scale down for performance
+                        if (!img.width || !img.height) {
+                            Toast.show('Image has invalid dimensions.', 'error');
+                            this.isProcessing = false;
+                            return;
+                        }
+                        const maxDim = 300;
+                        const scale = Math.min(maxDim / img.width, maxDim / img.height, 1);
+                        canvas.width = Math.max(1, Math.round(img.width * scale));
+                        canvas.height = Math.max(1, Math.round(img.height * scale));
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                        // Show processing
+                        processingBar.classList.remove('hidden');
+                        const progressEl = processingBar.querySelector('.progress-bar');
+                        progressEl.style.width = '30%';
+
+                        requestAnimationFrame(() => {
+                            progressEl.style.width = '70%';
+
+                            setTimeout(() => {
+                                let imageData;
+                                try {
+                                    imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                                } catch {
+                                    processingBar.classList.add('hidden');
+                                    this.isProcessing = false;
+                                    Toast.show('Cannot read this image — possible CORS restriction.', 'error');
+                                    return;
+                                }
+                                const numColors = parseInt((document.getElementById('paletteSizeSelect') || {}).value) || 8;
+                                this.extractedColors = ColorEngine.extract(imageData, numColors);
+                                progressEl.style.width = '100%';
+
+                                setTimeout(() => {
+                                    processingBar.classList.add('hidden');
+                                    progressEl.style.width = '0%';
+                                    this.isProcessing = false;
+                                    if (this.extractedColors.length === 0) {
+                                        Toast.show('No colors found — image may be fully transparent or solid black/white.', 'error');
+                                        return;
+                                    }
+                                    this.renderColors();
+                                    this.elements.resultsSection.classList.remove('hidden');
+                                    this.elements.resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    Toast.show(`${this.extractedColors.length} colors extracted!`, 'success');
+                                }, 400);
+                            }, 200);
+                        });
+                    },
+
+                    renderColors() {
+                        const { colorGrid, paletteBar, colorCount } = this.elements;
+                        const colors = this.extractedColors;
+                        if (!colors || colors.length === 0) return;
+                        const format = this.currentFormat;
+
+                        colorCount.textContent = `${colors.length} dominant colors found`;
+
+                        // Render grid
+                        colorGrid.innerHTML = colors.map((c, i) => {
+                            const displayValue = format === 'hex' ? c.hex : format === 'rgb' ? c.rgb : c.hsl;
+                            // WCAG badge: show best contrast ratio (against white or black)
+                            const aaWhite = c.contrast.white >= 4.5, aaaWhite = c.contrast.white >= 7;
+                            const aaBlack = c.contrast.black >= 4.5, aaaBlack = c.contrast.black >= 7;
+                            const wcagBest = aaaWhite ? 'AAA' : aaaBlack ? 'AAA' : aaWhite ? 'AA' : aaBlack ? 'AA' : '-';
+                            const wcagColor = wcagBest === 'AAA' ? 'bg-green-500' : wcagBest === 'AA' ? 'bg-blue-500' : 'bg-gray-400';
+                            return `
+                        <div class="color-swatch rounded-2xl overflow-hidden bg-white dark:bg-gray-900 shadow-md hover:shadow-xl cursor-pointer border border-gray-100 dark:border-gray-800"
+                             data-ci="${i}" tabindex="0" role="button" aria-label="Copy color ${displayValue}">
+                            <div class="h-28 sm:h-36 relative" style="background-color: ${c.hex}">
+                                <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-200"
+                                     style="background: rgba(0,0,0,0.15)">
+                                    <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg" style="background: rgba(0,0,0,0.4)">
+                                        <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                        </svg>
+                                        <span class="text-white text-xs font-semibold">Click to Copy</span>
+                                    </div>
+                                </div>
+                                <span class="absolute top-3 left-3 text-xs font-bold px-2 py-0.5 rounded-md"
+                                      style="color: ${c.contrastLabel}; background: rgba(${c.contrastLabel === '#ffffff' ? '255,255,255' : '0,0,0'},0.15)">
+                                    #${(i + 1).toString().padStart(2, '0')}
+                                </span>
+                                <span class="absolute top-3 right-3 text-[10px] font-bold px-1.5 py-0.5 rounded text-white ${wcagColor}">${wcagBest}</span>
+                            </div>
+                            <div class="p-3 sm:p-4">
+                                <p class="color-value font-mono text-sm font-semibold tracking-wide truncate">${displayValue}</p>
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-[10px] text-gray-400 dark:text-gray-500 font-mono">${c.rgb}</span>
+                                    <span class="text-[10px] text-gray-400 dark:text-gray-500">W:${c.contrast.white} B:${c.contrast.black}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                        }).join('');
+
+                        // Render palette bar
+                        paletteBar.innerHTML = colors.map((c, ci) =>
+                            `<div class="flex-1 cursor-pointer hover:flex-[2] transition-all duration-300" style="background-color: ${c.hex}" title="${c.hex}" data-ci="${ci}"></div>`
+                        ).join('');
+
+                        // Click handlers — read color by index into extractedColors (always fresh)
+                        const getDisplay = ci => {
+                            const c = this.extractedColors[ci];
+                            if (!c) return '';
+                            return this.currentFormat === 'hex' ? c.hex
+                                : this.currentFormat === 'rgb' ? c.rgb : c.hsl;
+                        };
+                        colorGrid.querySelectorAll('.color-swatch').forEach(swatch => {
+                            const ci = parseInt(swatch.dataset.ci);
+                            const handler = () => this.copyToClipboard(getDisplay(ci));
+                            swatch.addEventListener('click', handler);
+                            swatch.addEventListener('keydown', e => {
+                                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
+                            });
+                        });
+                        paletteBar.querySelectorAll('div').forEach(bar => {
+                            const ci = parseInt(bar.dataset.ci);
+                            bar.addEventListener('click', () => this.copyToClipboard(getDisplay(ci)));
+                        });
+                    },
+
+                    async copyToClipboard(text) {
+                        try {
+                            await navigator.clipboard.writeText(text);
+                            Toast.show(`Copied: ${text}`, 'success');
+                        } catch {
+                            try {
+                                const ta = document.createElement('textarea');
+                                ta.value = text;
+                                ta.style.cssText = 'position:fixed;opacity:0;left:-9999px;top:-9999px';
+                                document.body.appendChild(ta);
+                                ta.focus(); ta.select();
+                                const ok = document.execCommand('copy');
+                                document.body.removeChild(ta);
+                                if (ok) Toast.show(`Copied: ${text}`, 'success');
+                                else Toast.show(`Copy failed — select manually: ${text}`, 'error');
+                            } catch { Toast.show(`Copy failed — select manually: ${text}`, 'error'); }
+                        }
+                    },
+
+                    exportPalette() {
+                        if (!this.extractedColors || this.extractedColors.length === 0) {
+                            Toast.show('Upload an image first to export.', 'error');
+                            return;
+                        }
+                        const lines = this.extractedColors.map((c, i) =>
+                            `Color ${i + 1}: ${c.hex} | ${c.rgb} | ${c.hsl} | WCAG vs White: ${c.contrast.white}:1 | vs Black: ${c.contrast.black}:1`
+                        );
+
+                        const output = [
+                            '╔══════════════════════════════════════════╗',
+                            '║   Pro Color Extractor — Palette Export   ║',
+                            '║   https://oathanrex.github.io            ║',
+                            '╚══════════════════════════════════════════╝',
+                            '',
+                            `Extracted: ${new Date().toLocaleString()}`,
+                            `Colors: ${this.extractedColors.length}`,
+                            '',
+                            '──────────────────────────────────────────',
+                            ...lines,
+                            '──────────────────────────────────────────',
+                            '',
+                            'CSS Variables:',
+                            ':root {',
+                            ...this.extractedColors.map((c, i) => `  --color-${i + 1}: ${c.hex};`),
+                            '}',
+                            '',
+                            'Tailwind Config (extend.colors):',
+                            '{',
+                            ...this.extractedColors.map((c, i) => `  'palette-${i + 1}': '${c.hex}',`),
+                            '}',
+                            '',
+                            'SCSS Variables:',
+                            ...this.extractedColors.map((c, i) => `$color-${i + 1}: ${c.hex};`),
+                            '',
+                            'JSON:',
+                            JSON.stringify({
+                                palette: this.extractedColors.map((c, i) => ({
+                                    id: i + 1,
+                                    hex: c.hex, rgb: c.rgb, hsl: c.hsl,
+                                    wcag: { vsWhite: c.contrast.white, vsBlack: c.contrast.black }
+                                })),
+                                generatedBy: 'Pro Color Extractor',
+                                url: 'https://oathanrex.github.io/pro-color-extractor/',
+                                exportedAt: new Date().toISOString()
+                            }, null, 2),
+                        ].join('\n');
+
+                        const blob = new Blob([output], { type: 'text/plain' });
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `palette-${Date.now()}.txt`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        setTimeout(() => URL.revokeObjectURL(url), 1000);
+                        Toast.show('Palette exported!', 'success');
+                    },
+
+                    reset() {
+                        const { uploadPrompt, imagePreviewContainer, imagePreview, resultsSection, fileInput } = this.elements;
+                        uploadPrompt.classList.remove('hidden');
+                        imagePreviewContainer.classList.add('hidden');
+                        resultsSection.classList.add('hidden');
+                        if (this._previewObjectURL) {
+                            URL.revokeObjectURL(this._previewObjectURL);
+                            this._previewObjectURL = null;
+                        }
+                        imagePreview.src = '';
+                        fileInput.value = '';
+                        this.extractedColors = [];
+                        this.currentImage = null;
+                        this.isProcessing = false;
+                        this.currentFormat = 'hex';
+                        document.querySelectorAll('.format-tab').forEach(t => t.classList.remove('active'));
+                        const hexTab = document.querySelector('[data-format="hex"]');
+                        if (hexTab) hexTab.classList.add('active');
+                        // Free GPU memory
+                        const canvas = this.elements.canvas;
+                        if (canvas) { canvas.width = 0; canvas.height = 0; }
+                    }
+                };
+
+                // ==========================================
+                // INITIALIZE
+                // ==========================================
+                document.addEventListener('DOMContentLoaded', () => {
+                    ThemeManager.init();
+                    UI.init();
+                });
+
+            })();
+    </script>
+</body>
+
+</html>
